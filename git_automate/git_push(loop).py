@@ -1,5 +1,6 @@
 import subprocess
 import time   
+import datetime
 import os
 
 
@@ -45,5 +46,5 @@ while True:
     cmd = ["git", "push", "origin", branch_name]
     subprocess.call(cmd)
     count+=1
-    
+    print(f"Pushed at: {datetime.datetime.now()}")
     time.sleep(time_intv*60) 
