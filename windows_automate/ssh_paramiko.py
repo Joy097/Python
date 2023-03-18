@@ -6,8 +6,7 @@ username = 'desktop-lndeaqh\jabir'
 password = 'jabir123'
 
 
-username = ''
-password = 'jabir123'
+
 
 # Create an SSH client object
 ssh = paramiko.SSHClient()
