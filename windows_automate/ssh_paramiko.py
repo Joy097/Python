@@ -18,7 +18,7 @@ ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 ssh.connect(hostname, username=username, password=password)
 
 # Run a command on the remote PC
-stdin, stdout, stderr = ssh.exec_command('ls')
+stdin, stdout, stderr = ssh.exec_command('ipconfig')
 
 # Print the output of the command
 print(stdout.read().decode())
