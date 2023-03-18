@@ -12,3 +12,4 @@
 10. Pandas
 11. subprocess
 12. wmi(monitor)
+13. paramiko (ssh)
