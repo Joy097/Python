@@ -1,43 +1,28 @@
-from paramiko import SSHClient, AutoAddPolicy
-from rich import print, pretty, inspect
-pretty.install()
+import paramiko
 
-client = SSHClient()
-#LOAD HOST KEYS
-#client.load_host_keys('~/.ssh/known_hosts')
-client.load_host_keys('C:/Users/shiha/.ssh/known_hosts')
-client.load_system_host_keys()
-
-#Known_host policy
-client.set_missing_host_key_policy(AutoAddPolicy())
+# Set the hostname, username, and password for the remote PC
+hostname = '192.168.114.132'
+username = 'desktop-lndeaqh\jabir'
+password = 'jabir123'
 
 
-#client.connect('10.1.1.92', username='root', password='password1')
-client.connect('192.168.114.132', username='desktop-lndeaqh\jabir', password='jabir123')
+username = ''
+password = 'jabir123'
 
+# Create an SSH client object
+ssh = paramiko.SSHClient()
 
-# Run a command (execute PHP interpreter)
-#client.exec_command('hostname')
-stdin, stdout, stderr = client.exec_command('hostname')
-print(type(stdin))
-print(type(stdout))
-print(type(stderr))
+# Automatically add the remote PC's host key
+ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 
-# Optionally, send data via STDIN, and shutdown when done
-stdin.write('Hello world')
-stdin.channel.shutdown_write()
+# Connect to the remote PC using the SSH protocol
+ssh.connect(hostname, username=username, password=password)
 
-# Print output of command. Will wait for command to finish.
-print(f'STDOUT: {stdout.read().decode("utf8")}')
-print(f'STDERR: {stderr.read().decode("utf8")}')
+# Run a command on the remote PC
+stdin, stdout, stderr = ssh.exec_command('ls')
 
-# Get return code from command (0 is default for success)
-print(f'Return code: {stdout.channel.recv_exit_status()}')
+# Print the output of the command
+print(stdout.read().decode())
 
-# Because they are file objects, they need to be closed
-stdin.close()
-stdout.close()
-stderr.close()
-
-# Close the client itself
-client.close()
+# Close the SSH connection
+ssh.close()
