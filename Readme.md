@@ -11,3 +11,4 @@
 9. Theano
 10. Pandas
 11. subprocess
+12. wmi(monitor)
