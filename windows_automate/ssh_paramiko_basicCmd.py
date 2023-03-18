@@ -7,8 +7,6 @@ password = 'jabir123'
 
 
 
-
-# Create an SSH client object
 ssh = paramiko.SSHClient()
 
 # Automatically add the remote PC's host key
