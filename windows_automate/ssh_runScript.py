@@ -1,8 +1,8 @@
 import paramiko
 
-hostname = '192.168.114.132'
-username = 'desktop-lndeaqh\jabir'
-password = 'jabir123'
+hostname = 'ip'
+username = 'usrname'
+password = 'pass'
 
 # Connect to the remote device
 ssh = paramiko.SSHClient()

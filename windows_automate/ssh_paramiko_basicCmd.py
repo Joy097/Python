@@ -1,9 +1,9 @@
 import paramiko
 
 # Set the hostname, username, and password for the remote PC
-hostname = '192.168.114.132'
-username = 'desktop-lndeaqh\jabir'
-password = 'jabir123'
+hostname = 'ip'
+username = 'usrname'
+password = 'pass'
 
 
 
