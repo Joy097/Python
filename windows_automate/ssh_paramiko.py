@@ -5,7 +5,7 @@ pretty.install()
 client = SSHClient()
 #LOAD HOST KEYS
 #client.load_host_keys('~/.ssh/known_hosts')
-client.load_host_keys('C:/Users/brad/.ssh/known_hosts')
+client.load_host_keys('C:/Users/shiha/.ssh/known_hosts')
 client.load_system_host_keys()
 
 #Known_host policy
