@@ -6,11 +6,11 @@ password = 'jabir123'
 
 ssh = paramiko.SSHClient()
 ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-ssh.connect(hostname, username, password)
+ssh.connect(hostname=hostname, username=username, password=password)
 
 # Transfer file using sftp
 sftp = ssh.open_sftp()
-sftp.put(local_path='C:/Users/shiha/OneDrive/Desktop/Python-main/windows_automate/uptime.py', remote_path='C:/Users/shiha/Desktop/uptime.py')
+sftp.put(local_path=`r'C:\\Users\\shiha\\OneDrive\\Desktop\\Python-main\\windows_automate\\uptime.py'`, remote_path='C:\\Users\\shiha\\Desktop\\scripts\\uptime.py')
 stdin, stdout, stderr = ssh.exec_command('python C:/Users/shiha/Desktop/uptime.py')
 print(stdout.read().decode())
 sftp.close()
