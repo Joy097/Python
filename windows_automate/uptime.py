@@ -13,5 +13,5 @@ def convert_seconds(seconds):
 seconds = time.time() - psutil.boot_time()
 days, hours, minutes, seconds = convert_seconds(seconds)
 print("\r Uptime: {} days, {} hours, {} minutes, {} seconds".format(days, hours, minutes, seconds),end="")
-time.sleep(1)
+
 
