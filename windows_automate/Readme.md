@@ -5,3 +5,7 @@ We need to install OpenSSH to use a machine as a remote host. To do so,
 - Finally, ctrl+r > services.msc > right click OpenSSH and start
 
 Now you can access the remote device with port 22 for ssh operations.
+
+## Windows Server 2016 Setup
+- There is no OpenSSH server installed in this version. So, have to install it externally using powershell. Commands are:
+    - 
