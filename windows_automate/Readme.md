@@ -22,6 +22,6 @@ There is no OpenSSH server installed in this version. So, have to install it ext
 ---
 
 ## Secured Network
-- maybe there is python but both python and pip location path have to be in the environment variable
-- pip may not work in this network. So, use different network to use it
-- in secured network windows server, package file is not present. So, at first pip install in your machine and then copy paste to the remote server using the remote 
+- Maybe there is python but both python and pip location path have to be in the environment variable
+- Pip may not work in this network. So, use different network to use it
+- In secured network windows server, package file is not present. So, at first pip install in your machine and then copy paste to the remote server using the remote login software.
