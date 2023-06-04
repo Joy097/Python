@@ -23,6 +23,8 @@ def putFile():
 print("enter the credentials for the server you want to get the file")
 getFile()
 print("enter the credentials for the server you want to put the file")
-putFile()
+putFile()        
+
+
 
 
