@@ -1,0 +1,6 @@
+#Let us see the access modifiers in Python to understand the concept of Encapsulation and data hiding −
+
+#1. public: The public member is accessible from inside or outside the class.
+#2. private: The private member is accessible only inside class. Define a private member by prefixing the member name with two underscores, for example − __age
+#3. protected: Protected means that the attribute/method can only be used in the class where it is defined or its subclasses.
+# Private and protected method or attributes are not accessible outside the classes

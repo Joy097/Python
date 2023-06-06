@@ -1,0 +1,20 @@
+1. if __init__ is called inside child, then it will not access the parent's __init__ untill it is called
+2. calling happens through bottom up approach. So, the method should be on upside to execute
+3. to call a certain parent, have to use "parent.__init__" method
+ex - bodyKit.__init__(self, spoiler, wheel)
+4. if multiple parent, then super().__init__ goes to first created parent
+5. for any inheritence(multiple or multilevel), to access it's method, have to use
+ClassName.__init__(self,name....)
+6. methods can be also called from top. Like:
+def __init__(self,name,age, disease):
+        self.name = name
+        self.age = age
+        self.disease = disease
+        self.savings = self._getSavings()
+        
+    def _getSavings(self):
+        self.savings = int(self.age)*3333
+        print(self.savings)
+        return self.savings
+
+Here, _getSavings() can be called from top
