@@ -1,0 +1,11 @@
+4 types of inheritance:
+1. single inheritance (one child)
+2. multilevel inheritance (one child of every generation)
+3. hirarchical inheritance (many child)
+4. multiple inheritance (several parent of one child) (not much used)
+
+errors:
+when parent class is under the child class, then wont inherit the parent.
+# when there are 2 parents, then how to access only one parent?
+= child has all attributes of the parents. So, in this case, have to call
+clid.parent2.name
