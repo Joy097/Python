@@ -18,3 +18,7 @@ def __init__(self,name,age, disease):
         return self.savings
 
 Here, _getSavings() can be called from top
+7. parent: method(): print "parent"
+   child(parent): method (): print "child"
+child1 = child()
+child1.method(parent) #this will print "child"
