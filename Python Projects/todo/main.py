@@ -8,13 +8,10 @@ def write(todos):
     with open('todos.txt', 'w') as file:
         file.writelines(todos)
                 
-def inpt():
-    usr_act = input("add, edit, show, completed or exit:").strip()
-    return usr_act
                 
 while True:
     
-    usr_act=inpt()   
+    usr_act = input("add, edit, show, completed or exit:").strip()
     if usr_act.startswith('add'):
         todo = usr_act[4:].strip()+"\n"
         todos = read()
