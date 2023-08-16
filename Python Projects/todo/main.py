@@ -1,5 +1,6 @@
 #from functions import read, write
 import functions
+import time
                
 while True:
     
