@@ -3,7 +3,7 @@ import functions
 import time
                
 while True:
-    print(time.strftime("%b %d, %Y %H:%M:%S"))
+    print(time.strftime("It is: %b %d, %Y (%H:%M:%S)"))
     usr_act = input("add, edit, show, completed or exit:").strip()
     if usr_act.startswith('add'):
         todo = usr_act[4:].strip()+"\n"
