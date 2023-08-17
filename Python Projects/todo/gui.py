@@ -35,8 +35,12 @@ while True:
                 if value["todo"] == "":
                     continue
                 
-                newtodo = value["todo"] +"\n"
-                todos = functions.read()
+                
+                elif not value['todos'][0] == "": #
+                    newtodo = value["todo"] +"\n"
+                    todos = functions.read()    
+                
+                
                 todos.append(newtodo)
                 functions.write(todos)
                 window['todos'].update(values=todos)
