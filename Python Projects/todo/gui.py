@@ -10,7 +10,9 @@ editButton = sg.Button("Edit")
 doneButton = sg.Button("Done")
 
 window = sg.Window("My To-Do App",
-                   layout=[[label], [input_box,addButton],[list_box,editButton,doneButton]],
+                   layout=[[label], 
+                           [input_box,addButton],
+                           [list_box,editButton,doneButton]],
                    font=('Helvetica',20))
 while True:
     event,value=window.read()
@@ -36,13 +38,12 @@ while True:
         case "Done":
             done_task = value['todos'][0]
             todos = functions.read()
-            index = todos.index(done_task)
-            todos.pop(index)
+            todos.remove(done_task)
             functions.write(todos)
             window['todos'].update(values=todos)
             
         case 'todos':
-            window['todo'].update(value=value['todos'][0])
+            window['todo'].update(value=value['todos'][0].strip())
             
         case sg.WIN_CLOSED:
             break
