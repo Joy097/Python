@@ -41,7 +41,7 @@ while True:
                 todos = functions.read()
                 newtodo = value["todo"] +"\n"
                 
-                if value['todo'][0] == "":
+                if value["todos"] is None:
                     todos.append(newtodo)  
                 
                 else:                   #If anything is selected, add new task after that 
