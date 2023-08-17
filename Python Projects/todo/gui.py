@@ -40,7 +40,7 @@ while True:
                 
                 todos = functions.read()
                 lastv = todos[len(todos)-1][0]
-                print(lastv)
+                if lastv
                 newtodo = value["todo"] +"\n"
                 
                 if value["todos"] ==[]:
