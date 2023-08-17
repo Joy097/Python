@@ -67,12 +67,12 @@ while True:
                 
             case "Update":
                 try:
-                    todo = value['todos'][0] #value from the list
                     new_todo = value['todo'] #value from the box
-                    todos = functions.read() #current list
+                    todo = value['todos'][0] #value of list
+
+                    todos = functions.read() #list
                     index = todos.index(todo)#list value index
-                    temp = todos[index]      #to keep track of list number
-                    todos[index]=temp[:3]+new_todo+'\n'    #replace
+                    todos[index]=todo[:3]+new_todo+'\n'    #replace
                     functions.write(todos)   #save
                     window['todos'].update(values=todos)
                     window['todo'].update(value="")
