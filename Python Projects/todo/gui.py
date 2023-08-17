@@ -35,14 +35,17 @@ while True:
                 if value["todo"] == "":
                     continue
                 
-                
                 elif not value['todos'][0] == "": #If anything is selected, add new task after that 
                     newtodo = value["todo"] +"\n" 
                     selected_todo = value['todos'][0]
                     todos = functions.read()    
                     index = todos.index(todo)
+                    todos.insert(index, new_todo)               
+                else:
+                    newtodo = value["todo"] +"\n"
+                    todos = functions.read()
+                    todos.append(newtodo)
                 
-                todos.append(newtodo)
                 functions.write(todos)
                 window['todos'].update(values=todos)
                 window['todo'].update(value="")
