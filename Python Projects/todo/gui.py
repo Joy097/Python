@@ -6,8 +6,10 @@ import os
 
 def update_seq(list):
     for i in range(len(list)):
-        item = list[i]
+        if ord(list[i][0]) >47 and ord(list[i][0])<58:
+            list[i] = list[i][3:]
         list[i] = str(i+1)+". "+list[i]
+    return list
 
 
 if not os.path.exists("todos.txt"):
@@ -39,7 +41,9 @@ while True:
         print(event)
         print(value)
         window["clock"].update(value=time.strftime("It is: %b %d, %Y (%H:%M:%S)"))
+        
         match event:
+            
             case "Add":
 
                 if value["todo"] == "":  #nothing in the box. NO ADD event
