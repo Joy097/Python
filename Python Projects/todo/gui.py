@@ -27,7 +27,7 @@ while True:
             new_todo = value['todo'] #value from the box
             todos = functions.read() #current list
             index = todos.index(todo)#list value index
-            todos[index]=new_todo    #replace
+            todos[index]=new_todo+'\n'    #replace
             functions.write(todos)   #save
             window['todos'].update(values=todos)
             
