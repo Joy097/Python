@@ -1,6 +1,5 @@
-code
+read
 sleep
-school
+concert
 come home
-take rest
-play games
+restplay games
