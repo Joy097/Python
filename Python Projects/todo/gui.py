@@ -18,4 +18,7 @@ while True:
             newtodo = value["todo"] +"\n"
             todos.append(newtodo)
             functions.write(todos)
+            
+        case sg.WIN_CLOSED:
+            break
 window.close()
