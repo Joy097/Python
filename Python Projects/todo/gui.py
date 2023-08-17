@@ -39,17 +39,11 @@ while True:
                     continue
                 
                 todos = functions.read()
+                newtodo = value["todo"] +"\n"
                 
-                if value['todos'][0] == "":
-                    
-                    newtodo = value["todo"] +"\n"
-                    todos.append(newtodo)
+                todos.append(newtodo)
                 
-                else:                   #If anything is selected, add new task after that 
-                    newtodo = value["todo"] +"\n" 
-                    selected_todo = value['todos'][0]   
-                    index = todos.index(selected_todo)
-                    todos.insert(index, newtodo)               
+             
 
                 
                 functions.write(todos)
