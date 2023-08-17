@@ -83,7 +83,8 @@ while True:
                     continue
                             
             case 'todos':
-                window['todo'].update(value=value['todos'][0].strip())
+                show = value['todos'][0].strip()
+                window['todo'].update(value=show[3:])
                 
             case "Exit":
                 break
