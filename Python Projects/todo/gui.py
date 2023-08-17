@@ -103,7 +103,9 @@ while True:
             case "Clear":
                 window['todo'].update(value="")
                 
-            case "Reset"
+            case "Reset":
+                window['todos'].update(value="")
+                functions.write("")
                 
             case sg.WIN_CLOSED:
                 break
