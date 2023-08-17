@@ -3,6 +3,12 @@ import PySimpleGUI as sg
 import time
 import os
 
+
+def update(list):
+    for i in range(len(list)):
+        list[i] = str(i+1)+". "+
+
+
 if not os.path.exists("todos.txt"):
     with open("todos.txt","w") as file:
         pass
@@ -39,19 +45,17 @@ while True:
                     continue
                 
                 todos = functions.read()
-                
+                newtodo =value["todo"] +"\n"
                 
                 if value["todos"] ==[]:
-                    newtodo = str(len(todos))+". "+value["todo"] +"\n"
                     todos.append(newtodo)  
                 
                 else:                   #If anything is selected, add new task after that 
                     selected_todo = value['todos'][0]   
                     index = todos.index(selected_todo)
-                    newtodo = str(index)+". "+value["todo"] +"\n"
                     todos.insert(index, newtodo)               
 
-                
+                todos= update(todos)
                 functions.write(todos)
                 window['todos'].update(values=todos)
                 window['todo'].update(value="")
