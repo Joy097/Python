@@ -1,4 +1,4 @@
-list=['1. jabir','2. jaker','3. boroi']
-temp=list[1]
-list[1]=temp[:3]+"Hoye gese"
+list=['jabir','jaker','boroi']
+for i in range(len(list)):
+    list[i] = str(i+1)+". "+list[i]
 print(list)

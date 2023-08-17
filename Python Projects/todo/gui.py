@@ -4,9 +4,10 @@ import time
 import os
 
 
-def update(list):
+def update_seq(list):
     for i in range(len(list)):
-        list[i] = str(i+1)+". "+
+        item = list[i]
+        list[i] = str(i+1)+". "+list[i]
 
 
 if not os.path.exists("todos.txt"):
@@ -41,7 +42,7 @@ while True:
         match event:
             case "Add":
 
-                if value["todo"] == "":
+                if value["todo"] == "":  #nothing in the box. NO ADD event
                     continue
                 
                 todos = functions.read()
@@ -55,7 +56,7 @@ while True:
                     index = todos.index(selected_todo)
                     todos.insert(index, newtodo)               
 
-                todos= update(todos)
+                todos= update_seq(todos)
                 functions.write(todos)
                 window['todos'].update(values=todos)
                 window['todo'].update(value="")
