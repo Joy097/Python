@@ -32,9 +32,10 @@ rst_button = sg.Button("Reset")
 window = sg.Window("My To-Do App",
                    layout=[[clock],
                            [label], 
-                           [input_box,addButton,clr_button],
-                           [list_box,editButton,doneButton],
-                           [exit_button,rst_button]],
+                           [input_box],
+                           [addButton,clr_button,editButton,doneButton],
+                           [list_box],
+                           [exit_button,rst_button],justification='center'],
                    font=('Helvetica',20))
 while True:
     try:
