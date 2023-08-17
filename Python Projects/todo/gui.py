@@ -4,10 +4,12 @@ import PySimpleGUI as sg
 label = sg.Text("Type in a to-do")
 input_box = sg.InputText(tooltip="Enter to-do",key="todo")
 addButton = sg.Button("Add")
-list_box = sg.ListBox()
+list_box = sg.Listbox(values=functions.read(),key='todos',
+                      enable_events=True, size=[45,10])
+editButton = sg.Button("Edit")
 
 window = sg.Window("My To-Do App",
-                   layout=[[label], [input_box,addButton],[,]],
+                   layout=[[label], [input_box,addButton],[list_box,editButton]],
                    font=('Helvetica',20))
 while True:
     event,value=window.read()
