@@ -34,7 +34,8 @@ while True:
             window['todos'].update(values=todos)
             
         case "Done":
-            
+            done_task = value['todos'][0]
+            todos = functions.read()
             
         case 'todos':
             window['todo'].update(value=value['todos'][0])
