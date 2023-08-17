@@ -1,6 +1,8 @@
 import functions
 import PySimpleGUI as sg
+import time
 
+clock = sg.Text(time.strftime("%d %m, %Y"))
 label = sg.Text("Type in a to-do")
 input_box = sg.InputText(tooltip="Enter to-do",key="todo")
 addButton = sg.Button("Add")
@@ -11,7 +13,8 @@ doneButton = sg.Button("Done")
 exit_button = sg.Button("Exit")
 
 window = sg.Window("My To-Do App",
-                   layout=[[label], 
+                   layout=[[clock],
+                           [label], 
                            [input_box,addButton],
                            [list_box,editButton,doneButton],
                            [exit_button]],
