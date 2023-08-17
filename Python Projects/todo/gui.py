@@ -15,6 +15,7 @@ while True:
     event,value=window.read()
     print(event)
     print(value)
+    print(value['todos'][0])
     match event:
         case "Add":
             todos = functions.read()
@@ -23,8 +24,8 @@ while True:
             functions.write(todos)
             
         case "Edit":
-            todo = 
-            
+            todo = value['todos'][0]
+            new_todo = value['todo']
         case sg.WIN_CLOSED:
             break
 window.close()
