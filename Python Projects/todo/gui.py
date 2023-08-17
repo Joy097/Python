@@ -38,16 +38,20 @@ while True:
                 functions.write(todos)   #save
                 window['todos'].update(values=todos)
             except IndexError:
-                sg.pop
+                sg.popup("Select something to edit! -_-",font=('Helvetica',20))
                 continue
             
         case "Done":
-            done_task = value['todos'][0]
-            todos = functions.read()
-            todos.remove(done_task)
-            functions.write(todos)
-            window['todos'].update(values=todos)
-            
+            try:
+                done_task = value['todos'][0]
+                todos = functions.read()
+                todos.remove(done_task)
+                functions.write(todos)
+                window['todos'].update(values=todos)
+            except IndexError:
+                sg.popup("Have you actually done anything? -_- ",font=('Helvetica',20))
+                continue
+                        
         case 'todos':
             window['todo'].update(value=value['todos'][0].strip())
             
