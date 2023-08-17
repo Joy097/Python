@@ -34,11 +34,13 @@ while True:
         window["clock"].update(value=time.strftime("It is: %b %d, %Y (%H:%M:%S)"))
         match event:
             case "Add":
-                
+
                 if value["todo"] == "":
                     continue
                 
                 todos = functions.read()
+                lastv = todos[len(todos)-1][0]
+                print(lastv)
                 newtodo = value["todo"] +"\n"
                 
                 if value["todos"] ==[]:
