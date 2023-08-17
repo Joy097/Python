@@ -25,21 +25,22 @@ window = sg.Window("My To-Do App",
                            [list_box,editButton,doneButton],
                            [exit_button]],
                    font=('Helvetica',20))
-try:
-    while True:
+while True:
+    try:
         event,value=window.read(timeout=200) # timeout used to update loop 
         window["clock"].update(value=time.strftime("It is: %b %d, %Y (%H:%M:%S)"))
         match event:
             case "Add":
                 
                 if value["todo"] == "":
-                continue
+                    continue
                 
                 newtodo = value["todo"] +"\n"
                 todos = functions.read()
                 todos.append(newtodo)
                 functions.write(todos)
                 window['todos'].update(values=todos)
+                window['todo'].update(value="")
                 
             case "Edit":
                 try:
@@ -73,6 +74,8 @@ try:
                 
             case sg.WIN_CLOSED:
                 break
+    except:
+        continue
 window.close()
 
-#Fix blank add
+#Fix blank add
