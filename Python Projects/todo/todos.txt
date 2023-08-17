@@ -1,8 +1,9 @@
-weee
-ajib
-ami
-ki kori
-jabona
-rokona
-roksana
+1. weee
+2. ajib
+3. ami
+4. ki kori
+5. jabona
+6. rokona
+7. roksana
 8. last
+9. lastest
