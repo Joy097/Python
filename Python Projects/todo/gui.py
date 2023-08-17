@@ -31,7 +31,8 @@ while True:
             functions.write(todos)   #save
             window['todos'].update(values=todos)
             
-        
+        case 'todos':
+            
             
         case sg.WIN_CLOSED:
             break
