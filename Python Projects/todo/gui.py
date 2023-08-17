@@ -8,6 +8,9 @@ addButton = sg.Button("Add")
 window = sg.Window("My To-Do App",
                    layout=[[label], [input_box,addButton]],
                    font=('Helvetica',20))
-event=window.read()
-print(event)
+while True:
+    event,value=window.read()
+    print(event)
+    print(value)
+    match event
 window.close()
