@@ -28,7 +28,7 @@ window = sg.Window("My To-Do App",
                    font=('Helvetica',20))
 while True:
     try:
-        event,value=window.read(timeout=200) # timeout used to update loop 
+        event,value=window.read() # timeout used to update loop 
         print(event)
         print(value)
         window["clock"].update(value=time.strftime("It is: %b %d, %Y (%H:%M:%S)"))
@@ -37,17 +37,19 @@ while True:
                 
                 if value["todo"] == "":
                     continue
+
+                if value['todos'][0] == "":
+                    newtodo = value["todo"] +"\n"
+                    todos = functions.read()
+                    todos.append(newtodo)
                 
-                if not value['todos'][0] == "": #If anything is selected, add new task after that 
+                else:                   #If anything is selected, add new task after that 
                     newtodo = value["todo"] +"\n" 
                     selected_todo = value['todos'][0]
                     todos = functions.read()    
                     index = todos.index(selected_todo)
                     todos.insert(index, newtodo)               
-                if value['todos'] == "":
-                    newtodo = value["todo"] +"\n"
-                    todos = functions.read()
-                    todos.append(newtodo)
+
                 
                 functions.write(todos)
                 window['todos'].update(values=todos)
