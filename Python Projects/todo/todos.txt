@@ -1,5 +1,8 @@
 birth
 life
+childhood
+love
+family
 death
 grave life
 reincernation

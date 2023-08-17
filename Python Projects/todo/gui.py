@@ -36,13 +36,13 @@ while True:
                 if value["todo"] == "":
                     continue
                 
-                elif not value['todos'][0] == "": #If anything is selected, add new task after that 
+                if not value['todos'][0] == "": #If anything is selected, add new task after that 
                     newtodo = value["todo"] +"\n" 
                     selected_todo = value['todos'][0]
                     todos = functions.read()    
                     index = todos.index(selected_todo)
                     todos.insert(index, newtodo)               
-                else:
+                elif value['todos'][0] == "":
                     newtodo = value["todo"] +"\n"
                     todos = functions.read()
                     todos.append(newtodo)
