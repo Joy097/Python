@@ -36,6 +36,10 @@ while True:
         case "Done":
             done_task = value['todos'][0]
             todos = functions.read()
+            index = todos.index(done_task)
+            todos.pop(index)
+            functions.write(todos)
+            window['todos'].update(values=todos)
             
         case 'todos':
             window['todo'].update(value=value['todos'][0])
