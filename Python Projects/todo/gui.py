@@ -17,6 +17,7 @@ list_box = sg.Listbox(values=functions.read(),key='todos',
 editButton = sg.Button("Edit")
 doneButton = sg.Button("Done")
 exit_button = sg.Button("Exit")
+clr_button = sg.Button("Clear")
 
 window = sg.Window("My To-Do App",
                    layout=[[clock],
@@ -59,6 +60,7 @@ while True:
                     todos[index]=new_todo+'\n'    #replace
                     functions.write(todos)   #save
                     window['todos'].update(values=todos)
+                    window['todo'].update(value="")
                 except IndexError:
                     sg.popup("Select something to edit! -_-",font=('Helvetica',20))
                     continue
