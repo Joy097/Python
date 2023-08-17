@@ -2,7 +2,7 @@ import functions
 import PySimpleGUI as sg
 import time
 
-clock = sg.Text(time.strftime("%d %m, %Y"))
+clock = sg.Text("",key="clock")
 label = sg.Text("Type in a to-do")
 input_box = sg.InputText(tooltip="Enter to-do",key="todo")
 addButton = sg.Button("Add")
@@ -20,7 +20,8 @@ window = sg.Window("My To-Do App",
                            [exit_button]],
                    font=('Helvetica',20))
 while True:
-    event,value=window.read()
+    event,value=window.read(timeout=200) # timeout used to update loop 
+    window["clock"].update(value=time.strftime("It is: %b %d, %Y (%H:%M:%S)"))
     print(event)
     print(value)
     match event:
