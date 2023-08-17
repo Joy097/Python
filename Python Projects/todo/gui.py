@@ -61,3 +61,5 @@ while True:
         case sg.WIN_CLOSED:
             break
 window.close()
+
+#Fix blank add
