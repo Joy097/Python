@@ -39,12 +39,9 @@ while True:
                     continue
                 
                 todos = functions.read()
-                lastv = todos[len(todos)-1][0]
+                lastv = 
                 
-                if ord(lastv) >47 and ord(lastv) <58:  #putting a number infront of a text to make it unique
-                    newtodo = str(int(lastv)+1)+". "+value["todo"] +"\n"
-                else:
-                    newtodo = "1. "+value["todo"] +"\n"
+                newtodo = str(len(todos))+". "+value["todo"] +"\n"
                 
                 if value["todos"] ==[]:
                     todos.append(newtodo)  
