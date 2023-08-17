@@ -21,6 +21,7 @@ while True:
             newtodo = value["todo"] +"\n"
             todos.append(newtodo)
             functions.write(todos)
+            window['todos'].update(values=todos)
             
         case "Edit":
             todo = value['todos'][0] #value from the list
@@ -32,7 +33,7 @@ while True:
             window['todos'].update(values=todos)
             
         case 'todos':
-            
+            window['todo'].update(value=value['todos'][0])
             
         case sg.WIN_CLOSED:
             break
