@@ -27,6 +27,7 @@ editButton = sg.Button("Update")
 doneButton = sg.Button("Done")
 exit_button = sg.Button("Exit")
 clr_button = sg.Button("Clear")
+rst_button = sg.Button("Reset")
 
 window = sg.Window("My To-Do App",
                    layout=[[clock],
@@ -85,6 +86,7 @@ while True:
                     done_task = value['todos'][0]
                     todos = functions.read()
                     todos.remove(done_task)
+                    todos = update_seq(todos)
                     functions.write(todos)
                     window['todos'].update(values=todos)
                 except IndexError:
@@ -100,6 +102,8 @@ while True:
             
             case "Clear":
                 window['todo'].update(value="")
+                
+            case "Reset"
                 
             case sg.WIN_CLOSED:
                 break
