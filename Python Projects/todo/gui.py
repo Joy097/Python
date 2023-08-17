@@ -39,8 +39,8 @@ while True:
                     newtodo = value["todo"] +"\n" 
                     selected_todo = value['todos'][0]
                     todos = functions.read()    
-                    index = todos.index(todo)
-                    todos.insert(index, new_todo)               
+                    index = todos.index(selected_todo)
+                    todos.insert(index, newtodo)               
                 else:
                     newtodo = value["todo"] +"\n"
                     todos = functions.read()
