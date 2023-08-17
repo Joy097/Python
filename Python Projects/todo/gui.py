@@ -25,53 +25,54 @@ window = sg.Window("My To-Do App",
                            [list_box,editButton,doneButton],
                            [exit_button]],
                    font=('Helvetica',20))
-while True:
-    event,value=window.read(timeout=200) # timeout used to update loop 
-    window["clock"].update(value=time.strftime("It is: %b %d, %Y (%H:%M:%S)"))
-    match event:
-        case "Add":
-            
-            if value["todo"] == "":
-               continue
-            
-            newtodo = value["todo"] +"\n"
-            todos = functions.read()
-            todos.append(newtodo)
-            functions.write(todos)
-            window['todos'].update(values=todos)
-            
-        case "Edit":
-            try:
-                todo = value['todos'][0] #value from the list
-                new_todo = value['todo'] #value from the box
-                todos = functions.read() #current list
-                index = todos.index(todo)#list value index
-                todos[index]=new_todo+'\n'    #replace
-                functions.write(todos)   #save
-                window['todos'].update(values=todos)
-            except IndexError:
-                sg.popup("Select something to edit! -_-",font=('Helvetica',20))
+try:
+    while True:
+        event,value=window.read(timeout=200) # timeout used to update loop 
+        window["clock"].update(value=time.strftime("It is: %b %d, %Y (%H:%M:%S)"))
+        match event:
+            case "Add":
+                
+                if value["todo"] == "":
                 continue
-            
-        case "Done":
-            try:
-                done_task = value['todos'][0]
+                
+                newtodo = value["todo"] +"\n"
                 todos = functions.read()
-                todos.remove(done_task)
+                todos.append(newtodo)
                 functions.write(todos)
                 window['todos'].update(values=todos)
-            except IndexError:
-                sg.popup("Have you actually done anything? -_- ",font=('Helvetica',20))
-                continue
-                        
-        case 'todos':
-            window['todo'].update(value=value['todos'][0].strip())
-            
-        case "Exit":
-            break
-            
-        case sg.WIN_CLOSED:
-            break
+                
+            case "Edit":
+                try:
+                    todo = value['todos'][0] #value from the list
+                    new_todo = value['todo'] #value from the box
+                    todos = functions.read() #current list
+                    index = todos.index(todo)#list value index
+                    todos[index]=new_todo+'\n'    #replace
+                    functions.write(todos)   #save
+                    window['todos'].update(values=todos)
+                except IndexError:
+                    sg.popup("Select something to edit! -_-",font=('Helvetica',20))
+                    continue
+                
+            case "Done":
+                try:
+                    done_task = value['todos'][0]
+                    todos = functions.read()
+                    todos.remove(done_task)
+                    functions.write(todos)
+                    window['todos'].update(values=todos)
+                except IndexError:
+                    sg.popup("Have you actually done anything? -_- ",font=('Helvetica',20))
+                    continue
+                            
+            case 'todos':
+                window['todo'].update(value=value['todos'][0].strip())
+                
+            case "Exit":
+                break
+                
+            case sg.WIN_CLOSED:
+                break
 window.close()
 
-#Fix blank add
+#Fix blank add
