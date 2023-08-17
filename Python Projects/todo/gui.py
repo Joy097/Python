@@ -24,8 +24,13 @@ while True:
             functions.write(todos)
             
         case "Edit":
-            todo = value['todos'][0]
-            new_todo = value['todo']
+            todo = value['todos'][0] #value from the list
+            new_todo = value['todo'] #value from the box
+            todos = functions.read() #current list
+            index = todos.index(todo)#list value index
+            todos[index]=new_todo
+            functions.write(todos)
+            
         case sg.WIN_CLOSED:
             break
 window.close()
