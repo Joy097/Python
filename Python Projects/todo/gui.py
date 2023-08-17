@@ -35,7 +35,7 @@ window = sg.Window("My To-Do App",
                            [input_box],
                            [addButton,clr_button,editButton,doneButton],
                            [list_box],
-                           [exit_button,rst_button],justification='center'],
+                           [exit_button,rst_button]],
                    font=('Helvetica',20))
 while True:
     try:
