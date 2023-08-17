@@ -1,4 +1,6 @@
-eat
 code
 sleep
 school
+come home
+take rest
+play games

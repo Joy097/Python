@@ -15,7 +15,6 @@ while True:
     event,value=window.read()
     print(event)
     print(value)
-    print(value['todos'][0])
     match event:
         case "Add":
             todos = functions.read()
@@ -28,8 +27,8 @@ while True:
             new_todo = value['todo'] #value from the box
             todos = functions.read() #current list
             index = todos.index(todo)#list value index
-            todos[index]=new_todo
-            functions.write(todos)
+            todos[index]=new_todo+'\n'    #replace
+            functions.write(todos)   #save
             
         case sg.WIN_CLOSED:
             break
