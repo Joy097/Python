@@ -22,6 +22,9 @@ while True:
             todos.append(newtodo)
             functions.write(todos)
             
+        case "Edit":
+            todo = 
+            
         case sg.WIN_CLOSED:
             break
 window.close()
