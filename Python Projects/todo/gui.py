@@ -34,7 +34,7 @@ window = sg.Window("My To-Do App",
                            [label], 
                            [input_box,addButton,clr_button],
                            [list_box,editButton,doneButton],
-                           [exit_button]],
+                           [exit_button,rst_button]],
                    font=('Helvetica',20))
 while True:
     try:
@@ -104,8 +104,9 @@ while True:
                 window['todo'].update(value="")
                 
             case "Reset":
-                window['todos'].update(value="")
-                functions.write("")
+                empt=[]
+                functions.write(empt)
+                window['todos'].update(values=empt)
                 
             case sg.WIN_CLOSED:
                 break
