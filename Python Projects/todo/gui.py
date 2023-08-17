@@ -38,10 +38,8 @@ window = sg.Window("My To-Do App",
                    font=('Helvetica',20))
 while True:
     try:
-        event,value=window.read() # timeout used to update loop 
-        print(event)
-        print(value)
-        window["clock"].update(value=time.strftime("It is: %b %d, %Y (%H:%M:%S)"))
+        event,value=window.read(timeout=200) # timeout used to update loop 
+        window["clock"].update(value=time.strftime("Time: { %H:%M:%S } %b %d, %Y "))
         
         match event:
             
