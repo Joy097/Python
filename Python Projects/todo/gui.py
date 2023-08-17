@@ -52,6 +52,7 @@ while True:
                 else:                   #If anything is selected, add new task after that 
                     selected_todo = value['todos'][0]   
                     index = todos.index(selected_todo)
+                    
                     todos.insert(index, newtodo)               
 
                 
