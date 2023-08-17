@@ -7,4 +7,5 @@ force
 5. jala
 3. jabona
 4. tumi
-5. fajil
+5. ajob
+10. ebar
