@@ -40,7 +40,8 @@ while True:
                 
                 todos = functions.read()
                 lastv = todos[len(todos)-1][0]
-                if lastv
+                if ord(lastv) >47 and ord(lastv) <58:
+                    newtodo = value["todo"] +"\n"
                 newtodo = value["todo"] +"\n"
                 
                 if value["todos"] ==[]:
