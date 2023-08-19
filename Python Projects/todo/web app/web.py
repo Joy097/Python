@@ -9,4 +9,5 @@ st.write("To write something")
 for todo in todos:
     st.checkbox(todo)
     
-st.text_input(label="",placeholder="Enter a task")
+input = st.text_input(label="",placeholder="Enter a task")
+
