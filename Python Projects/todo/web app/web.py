@@ -7,6 +7,7 @@ def add_task():
     todo = st.session_state["newtodo"]+"\n"
     todos.append(todo)
     functions.write(todos)
+    st.session_state.newtodo = ""
     
 
 st.title("My To-do app")
