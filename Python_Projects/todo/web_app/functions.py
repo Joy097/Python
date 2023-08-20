@@ -1,9 +1,4 @@
-def read(filepath='todos.txt'):
-    # this is docstring. To see this, use print(help(read))
-    """ Read a text file and return a list of
-    todo items in it. So that the items don't 
-    get lost.
-    """
+def read(filepath='/todos.txt'):
     with open(filepath, 'r') as file:
         todos = file.readlines()
     return todos
