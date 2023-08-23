@@ -13,6 +13,6 @@ def del_all():
 
 repo_dir = input("Enter the path to the local git repository: ").strip()
 os.chdir(repo_dir)
-question = input("Do you want to delete all files in the repository? (y/n): ").strip()
-
+ask = input("Do you want to delete all files in the repository? (y/n): ").strip()
+if ask == "y":
 
