@@ -11,7 +11,10 @@ def del_all():
             os.remove(file_path)
             print(f"Deleted {file_path}")
 
-def push
+def push():
+    sshKey = input("Enter your ssh key: ").strip()
+    cmd = ["git", "clone",  sshKey]
+    subprocess.call(cmd)
 
 repo_dir = input("Enter the path to the local git repository: ").strip()
 os.chdir(repo_dir)
@@ -19,5 +22,5 @@ ask = input("Do you want to delete all files in the repository? (yes/n): ").stri
 if ask == "yes":
     del_all()
 
-sshKey = input("Enter your ssh key: ").strip()
-cmd = ["git", "clone",  sshKey]
+
+
