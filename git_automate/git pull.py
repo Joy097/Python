@@ -16,5 +16,5 @@ os.chdir(repo_dir)
 ask = input("Do you want to delete all files in the repository? (yes/n): ").strip()
 if ask == "yes":
     del_all()
-ask1 = input("Put the location to clone :").strip()
-cmd = ["git", "remote", "add", "origin", sshKey]
+git_repo = input("Put the location to clone :").strip()
+cmd = ["git", "clone",  git_repo]
