@@ -2,8 +2,7 @@ import subprocess
 import os
 import datetime
 
-repo_dir = input("Enter the path to the local git repository: ").strip()
-#os.chdir(repo_dir)
+def del_all():
 files = os.listdir(repo_dir)
 
 for file in files:
@@ -11,3 +10,7 @@ for file in files:
     if os.path.isfile(file_path):
         os.remove(file_path)
         print(f"Deleted {file_path}")
+
+repo_dir = input("Enter the path to the local git repository: ").strip()
+#os.chdir(repo_dir)
+
