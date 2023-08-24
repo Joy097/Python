@@ -5,4 +5,5 @@ url = 'https://en.wikipedia.org/wiki/List_of_largest_companies_in_the_United_Sta
 page = requests.get(url)
 soup = BeautifulSoup(page.text, 'html')
 print(soup)
-soup.find_all('table')
+print("----------------------------------------------------------------")
+print(soup.find_all('table'))
