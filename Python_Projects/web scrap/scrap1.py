@@ -6,4 +6,4 @@ page = requests.get(url)
 soup = BeautifulSoup(page.text, 'html')
 #print(soup)
 #print("----------------------------------------------------------------")
-print(soup.find_all('table')[1])
+table = soup.find_all('table')[1]
