@@ -8,6 +8,5 @@ soup = BeautifulSoup(page.text, 'html')
 #print("----------------------------------------------------------------")
 table = soup.find_all('table')[1]
 world_titles = table.find_all('th')
-print(world_titles)
-world_titles = [title.text for title in world_titles]
+world_titles = [title.text.strip() for title in world_titles]
 print(world_titles)
