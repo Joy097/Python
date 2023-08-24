@@ -15,4 +15,4 @@ print(world_titles)
 result=pd.DataFrame(columns=world_titles)
 print(result)
 
-table.find_all('td')
+print(table.find_all('td'))
