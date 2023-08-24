@@ -13,4 +13,6 @@ world_titles = [title.text.strip() for title in world_titles]
 print(world_titles)
 
 result=pd.DataFrame(columns=world_titles)
-result
+print(result)
+
+table.find
