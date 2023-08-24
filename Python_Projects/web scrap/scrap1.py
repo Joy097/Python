@@ -7,3 +7,4 @@ soup = BeautifulSoup(page.text, 'html')
 #print(soup)
 #print("----------------------------------------------------------------")
 table = soup.find_all('table')[1]
+print(soup.find_all('th'))
