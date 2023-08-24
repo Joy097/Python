@@ -12,4 +12,5 @@ world_titles = table.find_all('th')
 world_titles = [title.text.strip() for title in world_titles]
 print(world_titles)
 
-pd.DataFrame(columns=world_titles)
+result=pd.DataFrame(columns=world_titles)
+result
