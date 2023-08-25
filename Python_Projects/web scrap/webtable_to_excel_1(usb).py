@@ -8,5 +8,5 @@ soup = BeautifulSoup(page.text,'html')
 table = soup.find_all('table')[2]
 header = table.find_all('th')
 hlist = [head.text.strip() for head in header]
-daf = pd.DataFrame
-print(hlist)
+daf = pd.DataFrame(columns=hlist)
+print(daf)
