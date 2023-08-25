@@ -15,4 +15,6 @@ rows = table.find_all('tr')
 for row in rows:
     elements = row.find_all('td')
     elist = [elem.text.strip() for elem in elements]
-    length = len
+    length = len(daf)
+    daf.loc[length]=elist
+print(daf)
