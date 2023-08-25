@@ -13,4 +13,5 @@ daf = pd.DataFrame(columns=hlist)
 
 rows = table.find_all('tr')
 for row in rows:
-    
+    elements = row.find_all('td')
+    elist = [elem.]
