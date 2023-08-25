@@ -14,7 +14,7 @@ daf = pd.DataFrame(columns=hlist)
 rows = table.find_all('tr')
 for row in rows:
     elements = row.find_all('td')
-    elist = [elem.text.strip() for elem in elements]
+    elist = [elem.text.strip() for elem in elements[1:]]
     length = len(daf)
     daf.loc[length]=elist
 print(daf)
