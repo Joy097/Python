@@ -18,3 +18,4 @@ for row in rows[1:]:
     length = len(daf)
     daf.loc[length]=elist
 print(daf)
+daf.to_csv(r'C:\\Users\\shiha\\OneDrive\Desktop\\Python-main\\billionares.csv',index=False)
