@@ -11,8 +11,15 @@ table = soup.find_all('table')[1]
 world_titles = table.find_all('th')
 world_titles = [title.text.strip() for title in world_titles]
 print(world_titles)
-
+print("----------------------------------------------------------------")
 result=pd.DataFrame(columns=world_titles)
 print(result)
+print("----------------------------------------------------------------")
+rows = table.find_all('tr')
 
-print(table.find_all('td'))
+for row in rows[1:]:
+    row_data = row.find_all('td')
+    row_data = [list.text.strip() for list in row_data]
+    length = len(result)
+    result.loc[length] = row_data
+result.to_csv(r'C:\\Users\\shiha\\OneDrive\Desktop\\Python-main\\text.csv')
