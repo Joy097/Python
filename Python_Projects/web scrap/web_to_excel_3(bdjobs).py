@@ -6,14 +6,14 @@ url = 'https://bdjobs.com/career/careercouncil/CareerCounsellingCategory.asp'
 page = requests.get(url)
 soup = BeautifulSoup(page.text, 'html')
 table = soup.find_all(class_= 'question-card')
-all = table.find_all('li')
+all = table.find_all('ul')
 #user = table.find_all(class_= 'icon-user')
 #reply = table.find_all(class_= 'reply')
 #world_titles = table.find_all('th')
 #world_titles = [title.text.strip() for title in world_titles]
 #result=pd.DataFrame(columns=world_titles)
 #rows = table.find_all('tr')
-title = [title.text.strip() for title in title]
+all = [title.text.strip() for title in title]
 
 print(table)
 
