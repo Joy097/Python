@@ -13,7 +13,7 @@ all = table.find('ul')
 #world_titles = [title.text.strip() for title in world_titles]
 #result=pd.DataFrame(columns=world_titles)
 #rows = table.find_all('tr')
-all = [title.text.strip() for title in all]
+#all = [title.text.strip() for title in all]
 
 print(all)
 
