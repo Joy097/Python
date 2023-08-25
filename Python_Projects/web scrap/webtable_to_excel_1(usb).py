@@ -6,4 +6,5 @@ url = "https://en.wikipedia.org/wiki/US-Bangla_Airlines"
 page = requests.get(url)
 soup = BeautifulSoup(page.text,'html')
 table = soup.find_all('table')[2]
-print(table)
+th = table.find_all('th')
+
