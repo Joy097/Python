@@ -12,3 +12,5 @@ daf = pd.DataFrame(columns=hlist)
 #print(daf)
 
 rows = table.find_all('tr')
+for row in rows:
+    
