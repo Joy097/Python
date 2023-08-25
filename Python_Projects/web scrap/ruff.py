@@ -5,11 +5,13 @@ import pandas as pd
 url = "https://bdjobs.com/career/careercouncil/CareerCounsellingCategory.asp"
 page = requests.get(url)
 soup = BeautifulSoup(page.text,'html')
-table = soup.find_all('div',class_='question')
-header = table.find_all('th')
-hlist = [head.text.strip() for head in header]
-daf = pd.DataFrame(columns=hlist)
-print(daf)
+table = soup.find_all('div',class_='question-card')
+header = table.find_all('p')
+#hlist = [head.text.strip() for head in header]
+#daf = pd.DataFrame(columns=hlist)
+print(table)
+
+'''
 rows = table.find_all('tr')
 
 for row in rows[1:]:
@@ -19,3 +21,4 @@ for row in rows[1:]:
     daf.loc[length]=elist
 print(daf)
 daf.to_csv(r'C:\\Users\\shiha\\OneDrive\Desktop\\Python-main\\billionares.csv',index=False)
+'''
