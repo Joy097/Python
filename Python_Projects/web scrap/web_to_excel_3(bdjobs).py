@@ -13,7 +13,9 @@ reply = table.find_all(class_= 'reply')
 #world_titles = [title.text.strip() for title in world_titles]
 #result=pd.DataFrame(columns=world_titles)
 #rows = table.find_all('tr')
-print(table)
+#world_titles = [title.text.strip() for title in world_titles]
+
+print(user)
 
 '''
 for row in rows[1:]:
