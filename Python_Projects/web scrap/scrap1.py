@@ -16,4 +16,4 @@ for row in rows[1:]:
     row_data = [list.text.strip() for list in row_data]
     length = len(result)
     result.loc[length] = row_data
-result.to_csv(r'C:\\Users\\shiha\\OneDrive\Desktop\\Python-main\\companies.csv',index)
+result.to_csv(r'C:\\Users\\shiha\\OneDrive\Desktop\\Python-main\\companies.csv',index=False)
