@@ -10,7 +10,8 @@ info = table.find_all('ul')
 names=[]
 for i in info:    
     name = i.find_all('li')[0]
-    name = [head.text.strip() for head in header]
+    name = [head.text.strip() for head in name]
+    
 #hlist = [head.text.strip() for head in header]
 #daf = pd.DataFrame(columns=hlist)
 print(name)
