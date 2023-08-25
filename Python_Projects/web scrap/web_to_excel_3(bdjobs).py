@@ -12,6 +12,8 @@ reply_list = []
 
 # Loop through the 'question-card' elements
 for part in table[0]:
+    if isinstance(part, str):
+        continue  # Skip strings
     replies = part.find_all('p')
     for reply in replies:
         reply_list.append(reply.get_text(strip=True))
