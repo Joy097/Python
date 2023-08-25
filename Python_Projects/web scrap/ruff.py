@@ -2,10 +2,10 @@ from bs4 import BeautifulSoup
 import requests
 import pandas as pd
 
-url = "https://en.wikipedia.org/wiki/The_World%27s_Billionaires"
+url = "https://bdjobs.com/career/careercouncil/CareerCounsellingCategory.asp"
 page = requests.get(url)
 soup = BeautifulSoup(page.text,'html')
-table = soup.find_all('table')[2]
+table = soup.find_all('div',class_='question')
 header = table.find_all('th')
 hlist = [head.text.strip() for head in header]
 daf = pd.DataFrame(columns=hlist)
