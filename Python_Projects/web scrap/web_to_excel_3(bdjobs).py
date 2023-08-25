@@ -6,7 +6,7 @@ url = 'https://bdjobs.com/career/careercouncil/CareerCounsellingCategory.asp'
 page = requests.get(url)
 soup = BeautifulSoup(page.text, 'html')
 table = soup.find_all(class_= 'question-card')
-all = table.find('ul')
+#all = table.find('ul')
 #user = table.find_all(class_= 'icon-user')
 #reply = table.find_all(class_= 'reply')
 #world_titles = table.find_all('th')
@@ -15,7 +15,7 @@ all = table.find('ul')
 #rows = table.find_all('tr')
 #all = [title.text.strip() for title in all]
 
-print(all)
+print(table)
 
 '''
 for row in rows[1:]:
