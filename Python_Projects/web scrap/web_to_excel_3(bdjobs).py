@@ -8,6 +8,7 @@ soup = BeautifulSoup(page.text, 'html')
 table = soup.find_all(class_= 'question-card')
 title = table.find_all(class_= 'title')
 user = table.find_all(class_= 'icon-user')
+reply = table.find_all(class_= 'reply')
 #world_titles = table.find_all('th')
 #world_titles = [title.text.strip() for title in world_titles]
 #result=pd.DataFrame(columns=world_titles)
