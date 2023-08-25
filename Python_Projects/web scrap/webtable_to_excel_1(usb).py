@@ -12,7 +12,7 @@ daf = pd.DataFrame(columns=hlist)
 print(daf)
 rows = table.find_all('tr')
 
-for row in rows:
+for row in rows[1:]:
     elements = row.find_all('td')
     elist = [elem.text.strip() for elem in elements]
     length = len(daf)
