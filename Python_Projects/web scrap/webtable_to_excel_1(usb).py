@@ -10,12 +10,11 @@ header = table.find_all('th')
 hlist = [head.text.strip() for head in header]
 daf = pd.DataFrame(columns=hlist)
 print(daf)
-'''
+
 rows = table.find_all('tr')
 for row in rows:
     elements = row.find_all('td')
-    elist = [elem.text.strip() for elem in elements[1:]]
+    elist = [elem.text.strip() for elem in elements]
     length = len(daf)
     daf.loc[length]=elist
 print(daf)
-'''
