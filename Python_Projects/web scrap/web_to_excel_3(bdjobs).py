@@ -6,7 +6,7 @@ url = 'https://bdjobs.com/career/careercouncil/CareerCounsellingCategory.asp'
 page = requests.get(url)
 soup = BeautifulSoup(page.text, 'html')
 table = soup.find_all(class_= 'question-card')
-title = table.find_all(class_= 'title')
+title = soup.find_all(class_= 'title')
 user = table.find_all(class_= 'icon-user')
 reply = table.find_all(class_= 'reply')
 #world_titles = table.find_all('th')
