@@ -15,6 +15,9 @@ for part in table[0]:
     replies = part.find_all('p')
     for reply in replies:
         reply_list.append(reply.get_text(strip=True))
+        
+for part in table[0]:
+    reply = part.find_all('p')
 
 # Create a DataFrame using pandas
 df = pd.DataFrame(reply_list, columns=['Replies'])
