@@ -14,7 +14,8 @@ table = soup.find_all(class_= 'question-card')
 #result=pd.DataFrame(columns=world_titles)
 #rows = table.find_all('tr')
 #all = [title.text.strip() for title in all]
-
+for part in table[]:
+    
 print(table)
 
 '''
