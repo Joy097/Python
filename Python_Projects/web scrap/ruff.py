@@ -6,11 +6,11 @@ url = "https://bdjobs.com/career/careercouncil/CareerCounsellingCategory.asp"
 page = requests.get(url)
 soup = BeautifulSoup(page.text,'html')
 table = soup.find('div',class_='question-card')
-info = table.find_all('ul')[0]
-
+info = table.find_all('ul')
+name = info.find_all('li')[0]
 #hlist = [head.text.strip() for head in header]
 #daf = pd.DataFrame(columns=hlist)
-print(header)
+print(name)
 
 '''
 rows = table.find_all('tr')
