@@ -4,27 +4,20 @@ import pandas as pd
 
 url = 'https://bdjobs.com/career/careercouncil/CareerCounsellingCategory.asp'
 page = requests.get(url)
-soup = BeautifulSoup(page.text, 'html')
-table = soup.find_all(class_= 'question-card')
-#all = table.find('ul')
-#user = table.find_all(class_= 'icon-user')
-#reply = table.find_all(class_= 'reply')
-#world_titles = table.find_all('th')
-#world_titles = [title.text.strip() for title in world_titles]
-#result=pd.DataFrame(columns=world_titles)
-#rows = table.find_all('tr')
-#all = [title.text.strip() for title in all]
+soup = BeautifulSoup(page.text, 'html.parser')  # Use 'html.parser' here
+table = soup.find_all(class_='question-card')
+
+# Create an empty list to store the extracted data
+reply_list = []
+
+# Loop through the 'question-card' elements
 for part in table[0]:
-    reply = part.find_all('p')
-print(reply)
+    replies = part.find_all('p')
+    for reply in replies:
+        reply_list.append(reply.get_text(strip=True))
 
-'''
-for row in rows[1:]:
-    row_data = row.find_all('td')
-    row_data = [list.text.strip() for list in row_data]
-    length = len(result)
-    result.loc[length] = row_data
-print(result)
-result.to_csv(r'C:\\Users\\shiha\\OneDrive\Desktop\\Python-main\\companies.csv',index=False)
+# Create a DataFrame using pandas
+df = pd.DataFrame(reply_list, columns=['Replies'])
 
-'''
+# Print the DataFrame
+print(df)
