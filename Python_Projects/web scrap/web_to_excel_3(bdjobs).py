@@ -15,8 +15,8 @@ table = soup.find_all(class_= 'question-card')
 #rows = table.find_all('tr')
 #all = [title.text.strip() for title in all]
 for part in table[0]:
-    reply = part.find_all(class_= 'reply')
-print(table)
+    reply = part.find_all('p')
+print(reply)
 
 '''
 for row in rows[1:]:
