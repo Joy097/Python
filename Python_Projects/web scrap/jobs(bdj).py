@@ -18,6 +18,10 @@ for j in table[:5]:
         names = [head.text.strip() for head in user]
         job_ttl.append(names[0])
         comp.append(names[1])
+        loc.append(names[2])
+        edu.append(names[1])
+        exp.append(names[1])
+        date.append(names[1])
         
 print(job_ttl)
 
