@@ -24,19 +24,14 @@ for j in table[:5]:
         date.append(names[5][-11:])
         
 length=len(date)
+
+
 data = {'Job Title':job_ttl, 'Company':comp, 'Location':loc, 'Education':edu, 'Experience':exp, 'Deadline':date}
 df = pd.DataFrame(data)
-excel_writer = pd.ExcelWriter('unicode_dataframe.csv', engine='openpyxl')
-df.to_excel(excel_writer, index=False, sheet_name='BDJobs')
+df.to_csv(r'bdjobs0.csv',index=False, encoding='utf-8')
 
 
 '''
-data = {'Job Title':job_ttl, 'Company':comp, 'Location':loc, 'Education':edu, 'Experience':exp, 'Deadline':date}
-df = pd.DataFrame(data)
-df.to_csv(r'bdjobs0.csv',index=False)
-
-
-
 with open("file.txt", "w", encoding="utf-8") as file:
             file.write(names[0])
             
