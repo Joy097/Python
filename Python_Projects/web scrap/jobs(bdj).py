@@ -6,12 +6,12 @@ url = "https://jobs.bdjobs.com/JobSearch.asp?icatId=&requestType=deadline"
 page = requests.get(url)
 soup = BeautifulSoup(page.text,'html')
 table = soup.find_all('div',class_='norm-jobs-wrapper')
-print(table)
+
 
 for j in table:
         user = j.find_all('div',class_='job-title-text')
         names = [head.text.strip() for head in user]
-        names = names.decode("utf-8")
+        names = names[0].encode("utf-8")
         print(names)
 
 
