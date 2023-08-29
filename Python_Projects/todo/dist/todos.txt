@@ -1,3 +1,4 @@
-1. Complete 23-31 files
-2. Do power BI
-3. image processing using nlp to detect hand writing
+1. js
+2. react js
+3. django+react pro
+4. aws
