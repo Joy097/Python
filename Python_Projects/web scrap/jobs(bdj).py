@@ -24,9 +24,10 @@ for j in table[:5]:
         date.append(names[5][-11:])
         
 length=len(date)
-
-excel_writer = pd.ExcelWriter('unicode_dataframe.xlsx', engine='openpyxl')
-df.to_excel(excel_writer, index=False, sheet_name='Sheet1')
+data = {'Job Title':job_ttl, 'Company':comp, 'Location':loc, 'Education':edu, 'Experience':exp, 'Deadline':date}
+df = pd.DataFrame(data)
+excel_writer = pd.ExcelWriter('unicode_dataframe.csv', engine='openpyxl')
+df.to_excel(excel_writer, index=False, sheet_name='BDJobs')
 
 
 '''
