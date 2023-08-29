@@ -1,6 +1,8 @@
 from bs4 import BeautifulSoup
 import requests
 import pandas as pd
+import pywhatkit
+from datetime import datetime
 
 url = "https://jobs.bdjobs.com/JobSearch.asp?icatId=&requestType=deadline"
 page = requests.get(url)
@@ -32,8 +34,7 @@ data = {'Job Title':job_ttl, 'Company':comp, 'Location':loc, 'Education':edu, 'E
 df = pd.DataFrame(data)
 df.to_csv(r'bdjobs0.csv',index=False,encoding='utf-8')
 
-import pywhatkit
-from datetime import datetime
+
 current_time = datetime.now().time()
 hour = int(current_time.strftime('%H'))
 minute = int(current_time.strftime('%M'))
