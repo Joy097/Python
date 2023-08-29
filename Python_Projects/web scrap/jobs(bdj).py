@@ -25,7 +25,7 @@ for j in table[:5]:
         
 length=len(date)
 
-data = {'Job Title':res_names, 'Company':titles, 'Location':replies, 'Education':dates, 'Experience':views, 'Deadline':data}
+data = {'Job Title':job_ttl, 'Company':comp, 'Location':replies, 'Education':dates, 'Experience':views, 'Deadline':data}
 df = pd.DataFrame(data)
 df.to_csv(r'bdjobs0.csv',index=False)
 
