@@ -9,12 +9,10 @@ table = soup.find_all('div',class_='norm-jobs-wrapper')
 print(table)
 
 job_ttl=[]
-dates = []
-exp = []
 comp = []
-tags = []
-titles = []
-replies=[]
+edu = []
+exp = []
+date = []
 for i in table:    
     name = i.find_all('ul')
     for j in name:
