@@ -26,7 +26,8 @@ for j in table:
 str1=''
 if 'Na' in exp:
     indx=exp.index('Na')
-    str1=f'There is a {job_ttl[indx]} job for you with no experience at {comp[indx]}!!'
+    str1=f'There is a {job_ttl[indx]} job for you with no experience at {comp[indx]} inside {loc[indx]}!!'
+
 
 
 data = {'Job Title':job_ttl, 'Company':comp, 'Location':loc, 'Education':edu, 'Experience':exp, 'Deadline':date}
