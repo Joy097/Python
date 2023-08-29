@@ -8,6 +8,8 @@ soup = BeautifulSoup(page.text,'html')
 table = soup.find_all('div',class_='norm-jobs-wrapper')
 print(table)
 
+comp-name-text
+'''
 job_ttl=[]
 comp = []
 loc=[]
@@ -29,7 +31,7 @@ for i in table:
     title = i.find_all('h4')
     text = [psg.text.strip() for psg in title]
     titles.append(text[0])
-    '''
+
 data = {'Name':res_names, 'Title':titles, 'Reply':replies, 'Date':dates, 'Views':views, 'Comments':comments, 'Tags':tags}
 df = pd.DataFrame(data)
 df.to_csv(r'C:\\Users\\shiha\\OneDrive\Desktop\\Python-main\\bdjobs2.csv',index=False)
