@@ -41,3 +41,4 @@ if 'Na' in exp:
     str1=f'There is a {job_ttl[indx]} job for you with no experience at {comp[indx]} inside {loc[indx]}!!'
 
 
+
