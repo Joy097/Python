@@ -25,12 +25,17 @@ for j in table[:5]:
         
 length=len(date)
 
+excel_writer = pd.ExcelWriter('unicode_dataframe.xlsx', engine='openpyxl')
+df.to_excel(excel_writer, index=False, sheet_name='Sheet1')
+
+
+'''
 data = {'Job Title':job_ttl, 'Company':comp, 'Location':loc, 'Education':edu, 'Experience':exp, 'Deadline':date}
 df = pd.DataFrame(data)
 df.to_csv(r'bdjobs0.csv',index=False)
 
 
-'''
+
 with open("file.txt", "w", encoding="utf-8") as file:
             file.write(names[0])
             
