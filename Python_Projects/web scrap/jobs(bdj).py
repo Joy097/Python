@@ -11,6 +11,7 @@ print(table)
 for j in table:
         user = j.find_all('div',class_='job-title-text')
         names = [head.text.strip() for head in user]
+        names = names.decode("utf-8")
         print(names)
 
 
