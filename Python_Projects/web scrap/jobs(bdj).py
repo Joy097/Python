@@ -7,15 +7,17 @@ page = requests.get(url)
 soup = BeautifulSoup(page.text,'html')
 table = soup.find_all('div',class_='norm-jobs-wrapper')
 
-
+job_ttl=[]
 for j in table[:5]:
         user = j.find_all('div',class_='job-title-text')
         names = [head.text.strip() for head in user]
         
-        print(names)
 
 
 '''
+with open("file.txt", "w", encoding="utf-8") as file:
+            file.write(names[0])
+            
 job_ttl=[]
 comp = []
 loc=[]
