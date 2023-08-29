@@ -35,4 +35,4 @@ for i in table:
     titles.append(text[0])
 data = {'Name':res_names, 'Title':titles, 'Reply':replies, 'Date':dates, 'Views':views, 'Comments':comments, 'Tags':tags}
 df = pd.DataFrame(data)
-df.to_csv(r'C:\\Users\\shiha\\OneDrive\Desktop\\Python-main\\bdjobs2.csv',index=False)
+df.to_csv(r'C:\\Users\\shiha\\OneDrive\Desktop\\Python-main\\bdjobs2.csv',index=False,encoding='utf-16')
