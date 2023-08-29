@@ -8,7 +8,11 @@ soup = BeautifulSoup(page.text,'html')
 table = soup.find_all('div',class_='norm-jobs-wrapper')
 print(table)
 
-comp-name-text
+for j in table:
+        user = j.find_all('comp-name-text')
+        print(user)
+
+
 '''
 job_ttl=[]
 comp = []
