@@ -13,7 +13,8 @@ for j in table:
         names = [head.text.strip() for head in user]
         names = names[0].encode("utf-8")
         names = names.decode("utf-8")
-        print(names)
+        with open("file.txt", "w", encoding="utf-8") as file:
+            file.write("বাংলা")
 
 
 '''
