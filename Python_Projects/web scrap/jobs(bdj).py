@@ -2,11 +2,11 @@ from bs4 import BeautifulSoup
 import requests
 import pandas as pd
 
-url = "https://jobs.bdjobs.com/JobSearch.asp?fcatId=1&icatId=&requestType=deadline"
+url = "https://jobs.bdjobs.com/JobSearch.asp?icatId=&requestType=deadline"
 page = requests.get(url)
 soup = BeautifulSoup(page.text,'html')
 print(soup)
-#table = soup.find_all('div',class_='question-card')
+table = soup.find_all('div',class_='question-card')
 '''
 res_names=[]
 dates = []
