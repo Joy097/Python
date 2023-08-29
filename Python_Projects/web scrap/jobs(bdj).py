@@ -10,6 +10,7 @@ print(table)
 
 job_ttl=[]
 comp = []
+loc=[]
 edu = []
 exp = []
 date = []
