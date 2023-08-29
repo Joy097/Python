@@ -40,6 +40,6 @@ if 'Na' in exp:
     indx=exp.index('Na')
     str1=f'There is a {job_ttl[indx]} job for you with no experience at {comp[indx]} inside {loc[indx]}!!'
 print(exp)
-#pywhatkit.sendwhatmsg('+8801959842041',str(str1),hour,minute+2)
+pywhatkit.sendwhatmsg('+8801959842041',str(str1),hour,minute+2)
 
 
