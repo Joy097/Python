@@ -11,7 +11,7 @@ job_ttl=[]
 for j in table[:5]:
         user = j.find_all('div',class_='col-sm-12')
         names = [head.text.strip() for head in user]
-        
+        print(names)
 
 
 '''
