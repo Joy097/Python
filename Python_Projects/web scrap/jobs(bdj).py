@@ -20,8 +20,8 @@ for j in table[:5]:
         comp.append(names[1])
         loc.append(names[2])
         edu.append(names[4])
-        exp.append(names[1])
-        date.append(names[1])
+        exp.append(names[6])
+        date.append(names[5][:])
         
 print(job_ttl)
 
