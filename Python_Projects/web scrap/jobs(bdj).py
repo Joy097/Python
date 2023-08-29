@@ -17,7 +17,7 @@ for j in table[:5]:
         user = j.find_all('div',class_='col-sm-12')
         names = [head.text.strip() for head in user]
         ttl = names[0].encode('utf-16')
-        job_ttl.append(names[0])
+        job_ttl.append(ttl)
         comp.append(names[1])
         loc.append(names[2])
         edu.append(names[4])
