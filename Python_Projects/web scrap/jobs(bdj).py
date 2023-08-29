@@ -28,9 +28,13 @@ if 'Na' in exp:
     indx=exp.index('Na')
     str1=f'There is a {job_ttl[indx]} job for you with no experience at {comp[indx]} inside {loc[indx]}!!'
 
-
-
 data = {'Job Title':job_ttl, 'Company':comp, 'Location':loc, 'Education':edu, 'Experience':exp, 'Deadline':date}
 df = pd.DataFrame(data)
 df.to_csv(r'bdjobs0.csv',index=False,encoding='utf-8')
+
+import pywhatkit
+from datetime import datetime
+current_time = datetime.now().time()
+hour = int(current_time.strftime('%H'))
+minute = int(current_time.strftime('%M'))
 
