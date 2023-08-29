@@ -8,6 +8,11 @@ soup = BeautifulSoup(page.text,'html')
 table = soup.find_all('div',class_='norm-jobs-wrapper')
 
 job_ttl=[]
+comp = []
+loc=[]
+edu = []
+exp = []
+date = []
 for j in table[:5]:
         user = j.find_all('div',class_='col-sm-12')
         names = [head.text.strip() for head in user]
