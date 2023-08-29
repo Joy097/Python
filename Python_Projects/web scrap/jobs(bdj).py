@@ -5,7 +5,8 @@ import pandas as pd
 url = "https://jobs.bdjobs.com/JobSearch.asp?fcatId=1&icatId=&requestType=deadline"
 page = requests.get(url)
 soup = BeautifulSoup(page.text,'html')
-table = soup.find_all('div',class_='question-card')
+print(soup)
+#table = soup.find_all('div',class_='question-card')
 '''
 res_names=[]
 dates = []
