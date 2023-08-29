@@ -7,7 +7,7 @@ page = requests.get(url)
 soup = BeautifulSoup(page.text,'html')
 table = soup.find_all('div',class_='norm-jobs-wrapper')
 print(table)
-'''
+
 res_names=[]
 dates = []
 views = []
@@ -37,4 +37,3 @@ for i in table:
 data = {'Name':res_names, 'Title':titles, 'Reply':replies, 'Date':dates, 'Views':views, 'Comments':comments, 'Tags':tags}
 df = pd.DataFrame(data)
 df.to_csv(r'C:\\Users\\shiha\\OneDrive\Desktop\\Python-main\\bdjobs2.csv',index=False)
-'''
