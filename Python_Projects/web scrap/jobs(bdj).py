@@ -13,7 +13,7 @@ loc=[]
 edu = []
 exp = []
 date = []
-for j in table[:5]:
+for j in table:
         user = j.find_all('div',class_='col-sm-12')
         names = [head.text.strip() for head in user]
         job_ttl.append(names[0])
