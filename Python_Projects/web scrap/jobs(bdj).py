@@ -23,34 +23,15 @@ for j in table[:5]:
         exp.append(names[6])
         date.append(names[5][-11:])
         
-print(len(edu))
+length=len(date)
+
 
 
 '''
 with open("file.txt", "w", encoding="utf-8") as file:
             file.write(names[0])
             
-job_ttl=[]
-comp = []
-loc=[]
-edu = []
-exp = []
-date = []
-for i in table:    
-    name = i.find_all('ul')
-    for j in name:
-        user = j.find_all('li')
-        names = [head.text.strip() for head in user]
 
-        
-        
-    text = i.find_all('p')
-    text = [psg.text.strip() for psg in text]
-    replies.append(text[0])
-    
-    title = i.find_all('h4')
-    text = [psg.text.strip() for psg in title]
-    titles.append(text[0])
 
 data = {'Name':res_names, 'Title':titles, 'Reply':replies, 'Date':dates, 'Views':views, 'Comments':comments, 'Tags':tags}
 df = pd.DataFrame(data)
