@@ -9,7 +9,7 @@ table = soup.find_all('div',class_='norm-jobs-wrapper')
 print(table)
 
 for j in table:
-        user = j.find_all('comp-name-text')
+        user = j.find_all('div',class_='job-title')
         print(user)
 
 
