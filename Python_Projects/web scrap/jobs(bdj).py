@@ -21,9 +21,9 @@ for j in table[:5]:
         loc.append(names[2])
         edu.append(names[4])
         exp.append(names[6])
-        date.append(names[5][:])
+        date.append(names[5][-11:])
         
-print(job_ttl)
+print(edu)
 
 
 '''
