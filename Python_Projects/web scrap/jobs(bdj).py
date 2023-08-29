@@ -23,7 +23,7 @@ for j in table[:5]:
         exp.append(names[6])
         date.append(names[5][-11:])
         
-print(edu)
+print(len(edu))
 
 
 '''
