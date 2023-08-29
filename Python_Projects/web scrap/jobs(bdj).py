@@ -30,14 +30,3 @@ data = {'Job Title':job_ttl, 'Company':comp, 'Location':loc, 'Education':edu, 'E
 df = pd.DataFrame(data)
 df.to_csv(r'bdjobs0.csv',index=False,encoding='utf-8')
 
-
-'''
-with open("file.txt", "w", encoding="utf-8") as file:
-            file.write(names[0])
-            
-
-
-data = {'Name':res_names, 'Title':titles, 'Reply':replies, 'Date':dates, 'Views':views, 'Comments':comments, 'Tags':tags}
-df = pd.DataFrame(data)
-df.to_csv(r'C:\\Users\\shiha\\OneDrive\Desktop\\Python-main\\bdjobs2.csv',index=False)
-'''
