@@ -23,8 +23,9 @@ for j in table:
         exp.append(names[6])
         date.append(names[5][-11:])
         
-
-index = exp.
+str1=''
+if 'Na' in exp:
+    
 
 
 data = {'Job Title':job_ttl, 'Company':comp, 'Location':loc, 'Education':edu, 'Experience':exp, 'Deadline':date}
