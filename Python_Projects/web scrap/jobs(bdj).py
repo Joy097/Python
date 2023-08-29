@@ -8,10 +8,10 @@ soup = BeautifulSoup(page.text,'html')
 table = soup.find_all('div',class_='norm-jobs-wrapper')
 print(table)
 
-job_names=[]
+job_ttl=[]
 dates = []
-views = []
-comments = []
+exp = []
+comp = []
 tags = []
 titles = []
 replies=[]
@@ -20,11 +20,7 @@ for i in table:
     for j in name:
         user = j.find_all('li')
         names = [head.text.strip() for head in user]
-        res_names.append(names[0])
-        dates.append(names[1])
-        views.append(names[2][:-7])
-        comments.append(names[3][:-9])
-        tags.append(names[4])
+
         
         
     text = i.find_all('p')
