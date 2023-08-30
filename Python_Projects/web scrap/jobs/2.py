@@ -63,8 +63,6 @@ for i in range(2):
     next_button = driver.find_element(By.XPATH, "//a[contains(text(), 'Next')]")
     next_button.click()
 
-    
-    time.sleep(3)
 data = {'Job Title':job_ttl, 'Company':comp, 'Location':loc, 'Education':edu, 'Experience':exp, 'Deadline':date}
 df = pd.DataFrame(data)
 df.to_csv(r'bdjobs0.csv',index=False,encoding='utf-8')
