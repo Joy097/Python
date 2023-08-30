@@ -32,8 +32,9 @@ count=0
 driver.get(url)  
 for i in range(2):
     current_page_html = driver.page_source
-    table1 = current_page_html.find_all('div',class_='norm-jobs-wrapper')
-    table2 = current_page_html.find_all('div',class_='sout-jobs-wrapper')
+    soup2 = BeautifulSoup(current_page_html,'html')
+    table1 = soup2.find_all('div',class_='norm-jobs-wrapper')
+    table2 = soup2.find_all('div',class_='sout-jobs-wrapper')
     
     
 
