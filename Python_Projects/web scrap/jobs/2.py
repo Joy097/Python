@@ -38,12 +38,17 @@ for i in range(int(lst_pg[3:])):
     for j in table:
             user = j.find_all('div',class_='col-sm-12')
             names = [head.text.strip() for head in user]
-            print(names[6])
+            job_ttl.append(names[0])
+            comp.append(names[1])
+            loc.append(names[2])
+            edu.append(names[4])
+            exp.append(names[-1])
+            date.append(names[5][-11:])
         
 
-    #data = {'Job Title':job_ttl, 'Company':comp, 'Location':loc, 'Education':edu, 'Experience':exp, 'Deadline':date}
-    #df = pd.DataFrame(data)
-    #df.to_csv(r'bdjobs0.csv',index=False,encoding='utf-8')
+    data = {'Job Title':job_ttl, 'Company':comp, 'Location':loc, 'Education':edu, 'Experience':exp, 'Deadline':date}
+    df = pd.DataFrame(data)
+    df.to_csv(r'bdjobs0.csv',index=False,encoding='utf-8')
     
     
     
