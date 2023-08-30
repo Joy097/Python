@@ -48,6 +48,12 @@ def send_msg():
         hour = int(current_time.strftime('%H'))
         minute = int(current_time.strftime('%M'))
         pywhatkit.sendwhatmsg('+8801959842041','There are many jobs today!'+str1,hour,minute+2)
+        
+def clean(list):
+        for i in list:
+                if i=="" or i==None:
+                        
+                        
 
 for i in range(int(lst_pg[3:])):
     current_page_html = driver.page_source
@@ -60,6 +66,7 @@ for i in range(int(lst_pg[3:])):
         for x in table1:
                 user = x.find_all('div',class_='col-sm-12')
                 names = [head.text.strip() for head in user]
+                names=clean(names)
                 print(len(names))
                 job_ttl.append(names[0])
                 comp.append(names[1])
@@ -71,6 +78,7 @@ for i in range(int(lst_pg[3:])):
         for j in table2:
                 user = j.find_all('div',class_='col-sm-12')
                 names = [head.text.strip() for head in user]
+                names=clean(names)
                 print(len(names))
                 job_ttl.append(names[1])
                 comp.append(names[2])
