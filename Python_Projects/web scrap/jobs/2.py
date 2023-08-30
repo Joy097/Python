@@ -32,13 +32,14 @@ count=0
 driver.get(url)  
 for i in range(2):
     current_page_html = driver.page_source
-    table = soup.find_all('div',class_='norm-jobs-wrapper')
+    #table1 = soup.find_all('div',class_='norm-jobs-wrapper')
+    table = soup.find_all('div',class_='sout-jobs-wrapper')
+    #table = table1 + table2
     
     
 
     for j in table:
-            user = j.find_all('div',class_='col-md-12')
-            #if user == '': user = j.find_all('div',class_='col-md-12')
+            user = j.find_all('div',class_='col-sm-12')
             names = [head.text.strip() for head in user]
             job_ttl.append(names[0])
             comp.append(names[1])
