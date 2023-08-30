@@ -55,45 +55,37 @@ for i in range(int(lst_pg[3:])):
     table1 = soup2.find_all('div',class_='norm-jobs-wrapper')
     table2 = soup2.find_all('div',class_='sout-jobs-wrapper')
     
-    try:
+    
 
-        for x in table1:
-                user = x.find_all('div',class_='col-sm-12')
-                names = [head.text.strip() for head in user]
-                job_ttl.append(names[0])
-                comp.append(names[1])
-                loc.append(names[2])
-                edu.append(names[4])
+    for x in table1:
+            user = x.find_all('div',class_='col-sm-12')
+            names = [head.text.strip() for head in user]
+            job_ttl.append(names[0])
+            comp.append(names[1])
+            loc.append(names[2])
+            edu.append(names[4])
+            exp.append(names[-1])
+            date.append(names[5][-11:])
+        
+    for j in table2:
+            user = j.find_all('div',class_='col-sm-12')
+            names = [head.text.strip() for head in user]
+            job_ttl.append(names[1])
+            comp.append(names[2])
+            loc.append(names[4])
+            try:
+                edu.append(names[6])
+            except IndexError:
+                edu.append("None")
+
+            try:
                 exp.append(names[-1])
-                date.append(names[5][-11:])
-                
-        for j in table2:
-                user = j.find_all('div',class_='col-sm-12')
-                names = [head.text.strip() for head in user]
-                job_ttl.append(names[1])
-try:
-    comp.append(names[2])
-except IndexError:
-    comp.append(None)
-
-try:
-    loc.append(names[4])
-except IndexError:
-    loc.append(None)
-
-try:
-    edu.append(names[6])
-except IndexError:
-    edu.append(None)
-
-try:
-    exp.append(names[-1])
-except IndexError:
-    exp.append(None)
-try:
-    exp.append(names[-2][-11:])
-except IndexError:
-    exp.append(None)
+            except IndexError:
+                exp.append("None")
+            try:
+                exp.append(names[-2][-11:])
+            except IndexError:
+                exp.append("None")
         
     next()
 
