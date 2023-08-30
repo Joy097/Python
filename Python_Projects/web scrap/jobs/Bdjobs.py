@@ -25,8 +25,17 @@ edu = []
 exp = []
 date = []
 
-count=0
 driver.get(url)  
+
+def next():
+        next_button = driver.find_element(By.XPATH, "//a[contains(text(), 'Next')]")
+        next_button.click()
+        
+def make_csv():
+        data = {'Job Title':job_ttl, 'Company':comp, 'Location':loc, 'Education':edu, 'Experience':exp, 'Deadline':date}
+        df = pd.DataFrame(data)
+        df.to_csv(r'bdjobs0.csv',index=False,encoding='utf-8')
+
 for i in range(2):
     current_page_html = driver.page_source
     soup2 = BeautifulSoup(current_page_html,'html')
@@ -55,13 +64,7 @@ for i in range(2):
             exp.append(names[-1])
             date.append(names[-2][-11:])
         
-    
-    
-    
-    next_button = driver.find_element(By.XPATH, "//a[contains(text(), 'Next')]")
-    next_button.click()
+    next()
 
-data = {'Job Title':job_ttl, 'Company':comp, 'Location':loc, 'Education':edu, 'Experience':exp, 'Deadline':date}
-df = pd.DataFrame(data)
-df.to_csv(r'bdjobs0.csv',index=False,encoding='utf-8')
+make_csv()
 
