@@ -55,67 +55,34 @@ for i in range(int(lst_pg[3:])):
     table1 = soup2.find_all('div',class_='norm-jobs-wrapper')
     table2 = soup2.find_all('div',class_='sout-jobs-wrapper')
     
-    
+    try:
 
-    for x in table1:
-            user = x.find_all('div',class_='col-sm-12')
-            names = [head.text.strip() for head in user]
-            try:
-                edu.append(names[0])
-            except IndexError:
-                edu.append("None")
-            try:
-                edu.append(names[1])
-            except IndexError:
-                edu.append("None")
-            try:
-                edu.append(names[2])
-            except IndexError:
-                edu.append("None")
-            try:
+        for x in table1:
+                user = x.find_all('div',class_='col-sm-12')
+                names = [head.text.strip() for head in user]
+                job_ttl.append(names[0])
+                comp.append(names[1])
+                loc.append(names[2])
                 edu.append(names[4])
-            except IndexError:
-                edu.append("None")
-            try:
                 exp.append(names[-1])
-            except IndexError:
-                exp.append("None")
-            try:
-                exp.append(names[5][-11:])
-            except IndexError:
-                exp.append("None")
-        
-    for j in table2:
-            user = j.find_all('div',class_='col-sm-12')
-            names = [head.text.strip() for head in user]
-            try:
-                edu.append(names[1])
-            except IndexError:
-                edu.append("None")
-            try:
-                edu.append(names[2])
-            except IndexError:
-                edu.append("None")
-            try:
-                edu.append(names[4])
-            except IndexError:
-                edu.append("None")
-            try:
+                date.append(names[5][-11:])
+                
+        for j in table2:
+                user = j.find_all('div',class_='col-sm-12')
+                names = [head.text.strip() for head in user]
+                job_ttl.append(names[1])
+                comp.append(names[2])
+                loc.append(names[4])
                 edu.append(names[6])
-            except IndexError:
-                edu.append("None")
-
-            try:
                 exp.append(names[-1])
-            except IndexError:
-                exp.append("None")
-            try:
-                exp.append(names[-2][-11:])
-            except IndexError:
-                exp.append("None")
-    print(len(job_ttl),len(comp),len(loc),len(edu),len(exp),len(date))
-
+                date.append(names[-2][-11:])
+                
+    except:
+            continue
     
+    
+        
     next()
-
+print(len(job_ttl),len(comp),len(loc),len(edu),len(exp),len(date))
 make_csv()
+
