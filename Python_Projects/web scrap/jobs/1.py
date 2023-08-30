@@ -25,12 +25,12 @@ lst_pg = (i.text.strip() for i in table[5:]).__next__()
 count=0
 driver.get(url)  
 for i in range(int(lst_pg[3:])):
-    current_page_url = driver.current_url
+    #current_page_url = driver.current_url
     current_page_html = driver.page_source
     with open(f'file{count}.txt', "w") as file:
     # Write the value into the file
-        file.write()
-    print(current_page_html)
+        file.write("current_page_html")
+    #print(current_page_html)
     # Locate and click the "Next" button or pagination link
     next_button = driver.find_element(By.XPATH, "//a[contains(text(), 'Next')]")
     next_button.click()
