@@ -52,7 +52,22 @@ def send_msg():
 def clean1(list):
         leng = len(list)-7
         if leng<0:
-                for i in range((leng*-1):
+                for i in range(leng*-1):
+                        list.append("null")
+        elif leng>0:
+                for i in range(leng):
+                        list.append("null")
+        return list
+
+def clean2(list):
+        leng = len(list)-8
+        if leng<0:
+                for i in range(leng*-1):
+                        list.append("null")
+        elif leng>0:
+                for i in range(leng):
+                        list.append("null")
+        return list
                         
 
 for i in range(int(lst_pg[3:])):
@@ -66,7 +81,7 @@ for i in range(int(lst_pg[3:])):
         for x in table1:
                 user = x.find_all('div',class_='col-sm-12')
                 names = [head.text.strip() for head in user]
-                names=clean2(names)
+                names=clean1(names)
                 print(len(names))
                 job_ttl.append(names[0])
                 comp.append(names[1])
@@ -78,7 +93,7 @@ for i in range(int(lst_pg[3:])):
         for j in table2:
                 user = j.find_all('div',class_='col-sm-12')
                 names = [head.text.strip() for head in user]
-                names=clean1(names)
+                names=clean2(names)
                 print(len(names))
                 job_ttl.append(names[1])
                 comp.append(names[2])
