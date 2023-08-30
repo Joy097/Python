@@ -60,6 +60,7 @@ for i in range(int(lst_pg[3:])):
         for x in table1:
                 user = x.find_all('div',class_='col-sm-12')
                 names = [head.text.strip() for head in user]
+                print(len(names))
                 job_ttl.append(names[0])
                 comp.append(names[1])
                 loc.append(names[2])
@@ -70,6 +71,7 @@ for i in range(int(lst_pg[3:])):
         for j in table2:
                 user = j.find_all('div',class_='col-sm-12')
                 names = [head.text.strip() for head in user]
+                print(len(names))
                 job_ttl.append(names[1])
                 comp.append(names[2])
                 loc.append(names[4])
@@ -77,7 +79,7 @@ for i in range(int(lst_pg[3:])):
                 exp.append(names[-1])
                 date.append(names[-2][-11:])
                 
-        if len(job_ttl)
+        
                 
     except:
             continue
