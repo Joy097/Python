@@ -77,6 +77,8 @@ for i in range(int(lst_pg[3:])):
                 exp.append(names[-1])
                 date.append(names[-2][-11:])
                 
+        if len(job_ttl)
+                
     except:
             continue
     
