@@ -36,7 +36,7 @@ def make_csv():
         df = pd.DataFrame(data)
         df.to_csv(r'bdjobs0.csv',index=False,encoding='utf-8')
 
-for i in range(2):
+for i in range(int(lst_pg[3:])):
     current_page_html = driver.page_source
     soup2 = BeautifulSoup(current_page_html,'html')
     table1 = soup2.find_all('div',class_='norm-jobs-wrapper')
