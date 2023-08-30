@@ -20,10 +20,10 @@ soup = BeautifulSoup(page.text,'html')
 table = soup.find('div',id='bottomPagging')
 table = table.find_all('li')
 lst_pg = (i.text.strip() for i in table[5:]).__next__()  
-  
+
+driver.get(url)  
 for i in range(int(lst_pg[3:])):
 
-    driver.get(url)
     # Locate and click the "Next" button or pagination link
     next_button = driver.find_element(By.XPATH, "//a[contains(text(), 'Next')]")
     next_button.click()
