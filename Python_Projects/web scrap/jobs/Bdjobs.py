@@ -51,8 +51,10 @@ def send_msg():
         
 def clean(list):
         for i in list:
-                if i=="" or i==None:
-                        
+                if i=="":
+                        ind = list.index(i)
+                        list[ind]="null"
+                
                         
 
 for i in range(int(lst_pg[3:])):
