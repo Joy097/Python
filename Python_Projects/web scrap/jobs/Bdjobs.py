@@ -39,7 +39,15 @@ def make_csv():
         txt = f'bdjobs{time}.csv'
         df.to_csv(txt,index=False,encoding='utf-8')
 
-def
+def send_msg():
+        str1=''
+        if 'Na' in exp:
+                indx=exp.index('Na')
+                str1=f'There is a {job_ttl[indx]} job for you with no experience at {comp[indx]} inside {loc[indx]}!!'
+        current_time = datetime.now().time()
+        hour = int(current_time.strftime('%H'))
+        minute = int(current_time.strftime('%M'))
+        pywhatkit.sendwhatmsg('+8801959842041','There are many jobs today!'+str1,hour,minute+2)
 
 for i in range(int(lst_pg[3:])):
     current_page_html = driver.page_source
