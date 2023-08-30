@@ -33,10 +33,11 @@ def next():
         
 def make_csv():
         current_time = datetime.now()
-        time = current_time.strftime('%Y-%m-%d %H:%M:%S')
+        time = current_time.strftime('_%d-%m')
         data = {'Job Title':job_ttl, 'Company':comp, 'Location':loc, 'Education':edu, 'Experience':exp, 'Deadline':date}
         df = pd.DataFrame(data)
-        df.to_csv(r'bdjobs{time}.csv',index=False,encoding='utf-8')
+        txt = f'bdjobs{time}.csv'
+        df.to_csv(txt,index=False,encoding='utf-8')
 
 def
 
