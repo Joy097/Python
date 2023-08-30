@@ -38,6 +38,7 @@ for i in range(2):
 
     for j in table:
             user = j.find_all('div',class_='col-sm-12')
+            if user == '': user = j.find_all('div',class_='col-md-12')
             names = [head.text.strip() for head in user]
             job_ttl.append(names[0])
             comp.append(names[1])
@@ -53,7 +54,7 @@ for i in range(2):
     next_button.click()
 
     
-    time.sleep(10)
+    time.sleep(3)
 data = {'Job Title':job_ttl, 'Company':comp, 'Location':loc, 'Education':edu, 'Experience':exp, 'Deadline':date}
 df = pd.DataFrame(data)
 df.to_csv(r'bdjobs0.csv',index=False,encoding='utf-8')
