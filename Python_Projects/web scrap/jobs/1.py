@@ -18,9 +18,9 @@ url = "https://jobs.bdjobs.com/JobSearch.asp?icatId=&requestType=deadline"
 page = requests.get(url)
 soup = BeautifulSoup(page.text,'html')
 table = soup.find_all('div',id='bottomPagging')
-for i in table:    
-    names = [head.text.strip() for head in table]
-print(names)
+for i in table[-1:]:    
+    
+    print(table)
 
 
 '''
