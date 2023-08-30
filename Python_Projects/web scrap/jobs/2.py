@@ -41,22 +41,7 @@ for i in range(2):
     for x in table1:
             user = x.find_all('div',class_='col-sm-12')
             names = [head.text.strip() for head in user]
-            job_ttl.append(names[0])
-            comp.append(names[1])
-            loc.append(names[2])
-            edu.append(names[4])
-            exp.append(names[-1])
-            date.append(names[5][-11:])
-            
-    for j in table2:
-            user = j.find_all('div',class_='col-sm-12')
-            names = [head.text.strip() for head in user]
-            job_ttl.append(names[1])
-            comp.append(names[2])
-            loc.append(names[4])
-            edu.append(names[6])
-            exp.append(names[-1])
-            date.append(names[-2][-11:])
+            print(names)
         
     
     
