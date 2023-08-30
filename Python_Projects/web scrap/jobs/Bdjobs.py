@@ -49,7 +49,7 @@ def send_msg():
         minute = int(current_time.strftime('%M'))
         pywhatkit.sendwhatmsg('+8801959842041','There are many jobs today!'+str1,hour,minute+2)
 
-for i in range(10):
+for i in range(int(lst_pg[3:])):
     current_page_html = driver.page_source
     soup2 = BeautifulSoup(current_page_html,'html')
     table1 = soup2.find_all('div',class_='norm-jobs-wrapper')
