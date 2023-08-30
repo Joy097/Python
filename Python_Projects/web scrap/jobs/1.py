@@ -17,7 +17,8 @@ url = "https://jobs.bdjobs.com/JobSearch.asp?icatId=&requestType=deadline"
 # Open the webpage
 page = requests.get(url)
 soup = BeautifulSoup(page.text,'html')
-table = soup.find_all('div',class_='norm-jobs-wrapper')
+table = soup.find_all('div',id='bottomPagging')
+print(table)
 
 
 '''
