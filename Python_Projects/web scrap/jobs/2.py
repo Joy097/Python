@@ -37,8 +37,8 @@ for i in range(2):
     
     
 
-    for j in table1:
-            user = j.find_all('div',class_='col-sm-12')
+    for x in table1:
+            user = x.find_all('div',class_='col-sm-12')
             names = [head.text.strip() for head in user]
             job_ttl.append(names[0])
             comp.append(names[1])
