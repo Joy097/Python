@@ -32,9 +32,8 @@ count=0
 driver.get(url)  
 for i in range(2):
     current_page_html = driver.page_source
-    #table1 = soup.find_all('div',class_='norm-jobs-wrapper')
-    table = soup.find_all('div',class_='sout-jobs-wrapper')
-    #table = table1 + table2
+    table1 = soup.find_all('div',class_='norm-jobs-wrapper')
+    table2 = soup.find_all('div',class_='sout-jobs-wrapper')
     
     
 
@@ -51,12 +50,12 @@ for i in range(2):
     for j in table2:
             user = j.find_all('div',class_='col-sm-12')
             names = [head.text.strip() for head in user]
-            job_ttl.append(names[0])
-            comp.append(names[1])
-            loc.append(names[2])
-            edu.append(names[4])
+            job_ttl.append(names[1])
+            comp.append(names[2])
+            loc.append(names[4])
+            edu.append(names[6])
             exp.append(names[-1])
-            date.append(names[5][-11:])
+            date.append(names[-2][-11:])
         
     
     
