@@ -113,15 +113,9 @@ for i in range(int(lst_pg[3:])):
                 exp.append(names[-2][-11:])
             except IndexError:
                 exp.append("None")
+    print(len(job_ttl),len(comp),len(loc),len(edu),len(exp),len(date))
 
     
     next()
-    print(len(job_ttl),len(comp),len(loc),len(),len(),len())
-make_csv()
 
-job_ttl=[]
-comp = []
-loc=[]
-edu = []
-exp = []
-date = []
+make_csv()
