@@ -21,16 +21,16 @@ table = soup.find('div',id='bottomPagging')
 table = table.find_all('li')
 lst_pg = (i.text.strip() for i in table[5:]).__next__()  
 
-    job_ttl=[]
-    comp = []
-    loc=[]
-    edu = []
-    exp = []
-    date = []
+job_ttl=[]
+comp = []
+loc=[]
+edu = []
+exp = []
+date = []
 
 count=0
 driver.get(url)  
-for i in range(int(lst_pg[3:])):
+for i in range(2):
     current_page_html = driver.page_source
     table = soup.find_all('div',class_='norm-jobs-wrapper')
     
@@ -46,10 +46,6 @@ for i in range(int(lst_pg[3:])):
             exp.append(names[-1])
             date.append(names[5][-11:])
         
-
-    data = {'Job Title':job_ttl, 'Company':comp, 'Location':loc, 'Education':edu, 'Experience':exp, 'Deadline':date}
-    df = pd.DataFrame(data)
-    df.to_csv(r'bdjobs0.csv',index=False,encoding='utf-8')
     
     
     
@@ -58,5 +54,7 @@ for i in range(int(lst_pg[3:])):
 
     
     time.sleep(10)
-    count+=1
+data = {'Job Title':job_ttl, 'Company':comp, 'Location':loc, 'Education':edu, 'Experience':exp, 'Deadline':date}
+df = pd.DataFrame(data)
+df.to_csv(r'bdjobs0.csv',index=False,encoding='utf-8')
 
