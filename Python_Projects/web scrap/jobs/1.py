@@ -22,23 +22,20 @@ table = table.find_all('li')
 lst_pg = (i.text.strip() for i in table[5:]).__next__()  
 
 
-def get_page_html(driver):
-    return driver.execute_script("return document.documentElement.outerHTML;")
-
-# Get and print the current page's HTML
-
-print(current_page_html)
 count=0
 driver.get(url)  
 for i in range(int(lst_pg[3:])):
     current_page_url = driver.current_url
-    print(current_page_url)
-    current_page_html = get_page_html(driver)
+    current_page_html = driver.page_source
+    with open(f'file{count}.txt', "w") as file:
+    # Write the value into the file
+        file.write()
+    print(current_page_html)
     # Locate and click the "Next" button or pagination link
     next_button = driver.find_element(By.XPATH, "//a[contains(text(), 'Next')]")
     next_button.click()
 
     # Wait for a moment for the page to load
     time.sleep(10)
-    count+=
+    count+=1
 
