@@ -49,7 +49,10 @@ def send_msg():
         minute = int(current_time.strftime('%M'))
         pywhatkit.sendwhatmsg('+8801959842041','There are many jobs today!'+str1,hour,minute+2)
         
-def clean1()
+def clean1(list):
+        leng = len(list)-7
+        if leng<0:
+                for i in range((leng*-1):
                         
 
 for i in range(int(lst_pg[3:])):
