@@ -27,9 +27,12 @@ driver.get(url)
 for i in range(int(lst_pg[3:])):
     #current_page_url = driver.current_url
     current_page_html = driver.page_source
-    with open(f'file{count}.html', "wb") as file:
+    soup = BeautifulSoup(page.text,'html')
+    table1 = current_page_html.find_all('div',class_='norm-jobs-wrapper')
+    print(table1)
+    #with open(f'file{count}.html', "wb") as file:
     # Write the value into the file
-        file.write(current_page_html.encode("utf-8"))
+    #    file.write(current_page_html.encode("utf-8"))
     #print(current_page_html)
     # Locate and click the "Next" button or pagination link
     next_button = driver.find_element(By.XPATH, "//a[contains(text(), 'Next')]")
