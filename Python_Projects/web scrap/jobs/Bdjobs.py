@@ -50,21 +50,15 @@ def send_msg():
         pywhatkit.sendwhatmsg('+8801959842041','There are many jobs today!'+str1,hour,minute+2)
         
 def clean1(list):
-        leng = len(list)-7
-        if leng<0:
-                for i in range(leng*-1):
-                        list.append("null")
-        elif leng>0:
+        leng = 7-len(list)
+        if leng>0:
                 for i in range(leng):
                         list.append("null")
         return list
 
 def clean2(list):
-        leng = len(list)-8
-        if leng<0:
-                for i in range(leng*-1):
-                        list.append("null")
-        elif leng>0:
+        leng = 8-len(list)
+        if leng>0:
                 for i in range(leng):
                         list.append("null")
         return list
