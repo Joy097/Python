@@ -9,7 +9,7 @@ import pywhatkit
 from datetime import datetime
 
 # Create a new instance of the Chrome browser
-#driver = webdriver.Chrome()
+driver = webdriver.Chrome()
 
 # URL of the webpage with pagination
 url = "https://jobs.bdjobs.com/JobSearch.asp?icatId=&requestType=deadline"
@@ -19,16 +19,15 @@ page = requests.get(url)
 soup = BeautifulSoup(page.text,'html')
 table = soup.find('div',id='bottomPagging')
 table = table.find_all('li')
-lst_pg = (i.text.strip() for i in table[5:]).__next__()    
-print(lst_pg[3:])
+lst_pg = (i.text.strip() for i in table[5:]).__next__()  
+  
+for i in range(int(lst_pg[3:])):
 
+    driver.get(url)
+    # Locate and click the "Next" button or pagination link
+    next_button = driver.find_element(By.XPATH, "//a[contains(text(), 'Next')]")
+    next_button.click()
 
-'''
-driver.get(url)
-# Locate and click the "Next" button or pagination link
-next_button = driver.find_element(By.XPATH, "//a[contains(text(), 'Next')]")
-next_button.click()
+    # Wait for a moment for the page to load
+    time.sleep(10)
 
-# Wait for a moment for the page to load
-time.sleep(10)
-'''
