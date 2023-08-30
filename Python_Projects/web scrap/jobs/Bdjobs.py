@@ -8,13 +8,10 @@ import pandas as pd
 import pywhatkit
 from datetime import datetime
 
-# Create a new instance of the Chrome browser
-driver = webdriver.Chrome()
 
-# URL of the webpage with pagination
+driver = webdriver.Chrome()
 url = "https://jobs.bdjobs.com/JobSearch.asp?icatId=&requestType=deadline"
 
-# Open the webpage
 page = requests.get(url)
 soup = BeautifulSoup(page.text,'html')
 table = soup.find('div',id='bottomPagging')
