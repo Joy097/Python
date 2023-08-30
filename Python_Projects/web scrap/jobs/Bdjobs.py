@@ -40,10 +40,11 @@ def make_csv():
         df.to_csv(txt,index=False,encoding='utf-8')
 
 def send_msg():
-        str1=''
-        if 'Na' in exp:
-                indx=exp.index('Na')
-                str1=f'There is a {job_ttl[indx]} job for you with no experience at {comp[indx]} inside {loc[indx]}!!'
+        count=0
+        for i in exp:
+                if i=='Na':
+                        indx=exp.index('Na')
+        str1=f'There is a {job_ttl[indx]} job for you with no experience at {comp[indx]} inside {loc[indx]}!!'
         current_time = datetime.now().time()
         hour = int(current_time.strftime('%H'))
         minute = int(current_time.strftime('%M'))
@@ -106,4 +107,5 @@ for i in range(int(lst_pg[3:])):
     next()
 print(len(job_ttl),len(comp),len(loc),len(edu),len(exp),len(date))
 make_csv()
+send_msg()
 
