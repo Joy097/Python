@@ -30,11 +30,9 @@ date = []
 
 count=0
 driver.get(url)  
-for i in range(2):
+for i in range(int(lst_pg[3:])):
     current_page_html = driver.page_source
-    print(current_page_html)
     table1 = soup.find_all('div',class_='norm-jobs-wrapper')
-    table2 = soup.find_all('div',class_='sout-jobs-wrapper')
     
     
 
