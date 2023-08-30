@@ -21,6 +21,12 @@ table = soup.find('div',id='bottomPagging')
 table = table.find_all('li')
 lst_pg = (i.text.strip() for i in table[5:]).__next__()  
 
+    job_ttl=[]
+    comp = []
+    loc=[]
+    edu = []
+    exp = []
+    date = []
 
 count=0
 driver.get(url)  
@@ -29,12 +35,7 @@ for i in range(int(lst_pg[3:])):
     table = soup.find_all('div',class_='norm-jobs-wrapper')
     
     
-    job_ttl=[]
-    comp = []
-    loc=[]
-    edu = []
-    exp = []
-    date = []
+
     for j in table:
             user = j.find_all('div',class_='col-sm-12')
             names = [head.text.strip() for head in user]
