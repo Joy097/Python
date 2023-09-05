@@ -40,4 +40,4 @@
 
 **21. Streamlit:** used for making *shortcut webapp*.
 
-**21. Streamlit:** used for making *shortcut webapp*.
+**22. Keras:** used for making *shortcut webapp*.
