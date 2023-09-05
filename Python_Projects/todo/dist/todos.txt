@@ -2,3 +2,5 @@
 2. react js
 3. django+react pro
 4. aws
+5. iba books(word smart)
+6. get linkedin recommendations

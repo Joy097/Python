@@ -37,18 +37,22 @@ def make_csv():
         data = {'Job Title':job_ttl, 'Company':comp, 'Location':loc, 'Education':edu, 'Experience':exp, 'Deadline':date}
         df = pd.DataFrame(data)
         txt = f'bdjobs{time}.csv'
-        df.to_csv(txt,index=False,encoding='utf-8')
+        print(txt)
+        try:
+                df.to_csv(txt,index=False,encoding='utf-8')
+                print('done')
+        except Exception as e:
+                print(str(e))
 
 def send_msg():
         count=0
         for i in exp:
                 if i=='Na':
-                        indx=exp.index('Na')
-        str1=f'There is a {job_ttl[indx]} job for you with no experience at {comp[indx]} inside {loc[indx]}!!'
+                        count+=1
         current_time = datetime.now().time()
         hour = int(current_time.strftime('%H'))
         minute = int(current_time.strftime('%M'))
-        pywhatkit.sendwhatmsg('+8801959842041','There are many jobs today!'+str1,hour,minute+2)
+        pywhatkit.sendwhatmsg('+8801959842041',f'There are total {count} jobs for you with no experience!!',hour,minute+2)
         
 def clean1(list):
         leng = 7-len(list)
@@ -77,7 +81,6 @@ for i in range(int(lst_pg[3:])):
                 user = x.find_all('div',class_='col-sm-12')
                 names = [head.text.strip() for head in user]
                 names=clean1(names)
-                print(len(names))
                 job_ttl.append(names[0])
                 comp.append(names[1])
                 loc.append(names[2])
@@ -89,7 +92,6 @@ for i in range(int(lst_pg[3:])):
                 user = j.find_all('div',class_='col-sm-12')
                 names = [head.text.strip() for head in user]
                 names=clean2(names)
-                print(len(names))
                 job_ttl.append(names[1])
                 comp.append(names[2])
                 loc.append(names[4])
@@ -105,7 +107,6 @@ for i in range(int(lst_pg[3:])):
     
         
     next()
-print(len(job_ttl),len(comp),len(loc),len(edu),len(exp),len(date))
 make_csv()
 send_msg()
 
