@@ -30,5 +30,7 @@ acf_plot = plot_acf(production_ice_cream, lags=100)
 plt.savefig('figures/AR_acf.png')  
 
 #PACF
-pacf_plot = plot_pacf(production_ice_cream, lags=100)
+pacf_plot = plot_pacf(production_ice_cream)
 plt.savefig('figures/AR_pacf.png') 
+
+train
