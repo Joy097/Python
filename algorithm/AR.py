@@ -49,4 +49,11 @@ model_fit = model.fit()
 pred_start_date = test_data.index[0]
 pred_end_date = test_data.index[-1]
 
-predictions = model_fit
+predictions = model_fit.predict(start=pred_start_date, end=pred_end_date)
+residuals = test_data - predictions
+
+plt.figure(figsize=(10,4))
+plt.plot(production_ice_cream)
+plt.title('Ice-cream production', fontsize=20)
+plt.ylabel('Production', fontsize = 16)
+plt.savefig('figures/AR.png')
