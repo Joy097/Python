@@ -17,4 +17,10 @@ print(production_ice_cream)
 production_ice_cream=production_ice_cream.asfreq(pd.infer_ferq(production_ice_cream.index))
 
 start_date = pd.to_datetime('2010-01-01')
-production_ice_cream = production_ice_cream[s]
+production_ice_cream = production_ice_cream[start_date:]
+
+plt.figure(figsize=(10,4))
+plt.plot(production_ice_cream)
+plt.title('Ice-cream production', fontsize=20)
+plt.ylabel('Production', fontsize = 16)
+plt.
