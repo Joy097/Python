@@ -5,8 +5,7 @@ from pandas import datetime
 from datetime import timedelta
 from pandas.plotting import register_matplotlib_converters
 from statsmodels.graphics.tsaplots import plot_acf, plot_pacf
-import statsmodels.api as sm
-from statsmodels.sm.tsa.arima.model import ARMA
+from statsmodels.tsa.arima.model import ARIMA
 register_matplotlib_converters()
 from time import time
 
@@ -41,7 +40,7 @@ train_data = production_ice_cream[:train_end]
 test_data = production_ice_cream[train_end+timedelta(days=1):test_end]
 
 # train with AR
-model = ARMA(train_data, order=(3,0))
+model = ARIMA(train_data, order=(3,0,0))
 
 #fit model
 model_fit = model.fit()
