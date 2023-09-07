@@ -16,7 +16,11 @@ plt.savefig('plot1.png')
 
 #try to make stationary
 first_diffs = tickerDf.Close.values[1:] - tickerDf.Close.values[:-1]
-#first_diffs = np.concatenate([first_diffs, [0]])
-
-#tickerDf['Diff'] = first_diffs
-print(first_diffs)
+first_diffs = np.concatenate([first_diffs, [0]])
+tickerDf['Diff'] = first_diffs
+print(tickerDf.head())
+plt.figure(figsize=(10,4))
+plt.plot(tickerDf.FirstDifference)
+plt.title('First Difference over Time (%s)'%tickerSymbol, fontsize=20)
+plt.ylabel('Price Difference', fontsize=16)
+plt.savefig('plot2.png')
