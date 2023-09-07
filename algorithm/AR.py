@@ -46,7 +46,7 @@ model = ARIMA(train_data, order=(3,0,0))
 model_fit = model.fit()
 print(model_fit.summary())
 
-'''#now the p-value close to 0 can be considered. but any lag greater than 0.5 has to be avoided
+#now the p-value close to 0 can be considered. but any lag greater than 0.5 has to be avoided
 #test the test_data
 pred_start_date = test_data.index[0]
 pred_end_date = test_data.index[-1]
@@ -58,4 +58,4 @@ plt.figure(figsize=(10,4))
 plt.plot(residuals)
 plt.title('Residuals from AR', fontsize=20)
 plt.ylabel('Error', fontsize = 16)
-plt.savefig('figures/AR_residual.png')'''
+plt.savefig('figures/AR_residual.png')
