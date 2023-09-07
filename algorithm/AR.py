@@ -14,4 +14,4 @@ def parser(s):
 production_ice_cream = pd.read_csv('ice_cream.csv', parse_dates=[0], index_col=0, squeeze=True, date_parser=parser)
 production_ice_cream.rename('production', inplace=True)
 print(production_ice_cream)
-=production_ice_cream
+production_ice_cream=production_ice_cream.asfreq(pd.infer_ferq(production_ice_cream.index))
