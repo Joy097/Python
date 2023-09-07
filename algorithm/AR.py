@@ -35,3 +35,5 @@ plt.savefig('figures/AR_pacf.png')
 
 train_end = datetime(2018,12,1)
 test_end = datetime(2019,12,1)
+
+train_data = production_ice_cream[:train]
