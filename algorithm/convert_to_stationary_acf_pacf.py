@@ -18,3 +18,5 @@ plt.savefig('plot1.png')
 first_diffs = tickerDf.Close.values[1:] - tickerDf.Close.values[:-1]
 first_diffs = np.concatenate([first_diffs, [0]])
 
+tickerDf['Diff'] = first_diffs
+print(tickerDf.head())
