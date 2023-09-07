@@ -33,4 +33,5 @@ plt.savefig('figures/AR_acf.png')
 pacf_plot = plot_pacf(production_ice_cream)
 plt.savefig('figures/AR_pacf.png') 
 
-train
+train_end = datetime(2018,12,1)
+test_end = datetime(2019,12,1)
