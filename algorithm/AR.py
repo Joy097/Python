@@ -53,7 +53,7 @@ predictions = model_fit.predict(start=pred_start_date, end=pred_end_date)
 residuals = test_data - predictions
 
 plt.figure(figsize=(10,4))
-plt.plot(production_ice_cream)
-plt.title('Ice-cream production', fontsize=20)
-plt.ylabel('Production', fontsize = 16)
-plt.savefig('figures/AR.png')
+plt.plot(residuals)
+plt.title('Residuals from AR', fontsize=20)
+plt.ylabel('Error', fontsize = 16)
+plt.savefig('figures/AR_residual.png')
