@@ -17,3 +17,5 @@ plt.figure(figsize=(10,4))
 plt.plot(df_ice_cream.production)
 plt.title('Ice-cream production', fontsize=20)
 plt.ylabel('Production', fontsize = 16)
+for year in range(2011,2021):
+    plt.axvline(pd.to_datetime(str(year)+'-01-01'), color='k', linestyle='--', alpha=0.2)
