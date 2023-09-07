@@ -12,4 +12,4 @@ from time import time
 def parser(s):
     return datetime.strptime(s, '%Y-%m-%d')
 
-production
+production_ice_cream.rename('')
