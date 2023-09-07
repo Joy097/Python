@@ -7,4 +7,5 @@ register_matplotlib_converters()
 df_ice_cream = pd.read_csv('ice_cream.csv')
 print(df_ice_cream.head())
 
-df_ice_cream.renmae(columns={'DATE':'date','IPN311'})
+df_ice_cream.renmae(columns={'DATE':'date','IPN31152N':'production'}, inplace=True)
+df_ice_cream
