@@ -13,4 +13,6 @@ df_ice_cream.set_index('date', inplace=True)
 start_date = pd.to_datetime('2010-01-01')
 df_ice_cream = df_ice_cream[start_date:]
 
-plt.figure
+plt.figure(figsize=(10,4))
+plt.plot(df_ice_cream.production)
+plt.title('Ice-cream production')
