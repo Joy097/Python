@@ -25,3 +25,10 @@ plt.title('Ice-cream production', fontsize=20)
 plt.ylabel('Production', fontsize = 16)
 plt.savefig('figures/AR.png')
 
+#ACF
+acf_plot = plot_acf(production_ice_cream.production, lags=100)
+plt.savefig('figures/AR_acf.png')  
+
+#PACF
+pacf_plot = plot_pacf(production_ice_cream.production, lags=100)
+plt.savefig('figures/AR_pacf.png') 
