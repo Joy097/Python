@@ -15,4 +15,5 @@ df_ice_cream = df_ice_cream[start_date:]
 
 plt.figure(figsize=(10,4))
 plt.plot(df_ice_cream.production)
-plt.title('Ice-cream production')
+plt.title('Ice-cream production', fontsize=20)
+plt.ylabel('Production', fontsize = 16)
