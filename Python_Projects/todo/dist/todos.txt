@@ -1,6 +1,7 @@
-1. js
-2. react js
-3. django+react pro
-4. aws
-5. iba books(word smart)
-6. get linkedin recommendations
+1. arima asap
+2. js
+3. react js
+4. django+react pro
+5. aws
+6. iba books(word smart)
+7. get linkedin recommendations
