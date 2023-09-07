@@ -12,3 +12,5 @@ plt.plot(tickerDf.Close)
 plt.title('Stock Price over Time (%s)'%ticker_symbol, fontsize=20)
 plt.ylabel('Price', fontsize=16)
 plt.savefig('plot1.png')
+
+#try to make stationary
