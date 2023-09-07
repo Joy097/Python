@@ -9,3 +9,5 @@ from statsmodels.tsa.arima_model import ARMA
 register_matplotlib_converters()
 from time import time
 
+def parser(s):
+    return 
