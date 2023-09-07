@@ -10,4 +10,6 @@ register_matplotlib_converters()
 from time import time
 
 def parser(s):
-    return 
+    return datetime.strptime(s, '%Y-%m-%d')
+
+production
