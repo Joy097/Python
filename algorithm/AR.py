@@ -23,4 +23,4 @@ plt.figure(figsize=(10,4))
 plt.plot(production_ice_cream)
 plt.title('Ice-cream production', fontsize=20)
 plt.ylabel('Production', fontsize = 16)
-plt.
+plt.savefig('figures/AR.png')
