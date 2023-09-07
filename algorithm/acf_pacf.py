@@ -25,4 +25,4 @@ acf_plot = plot_acf(df_ice_cream.production, lags=100)
 plt.savefig('my_plot.png')  
 
 #PACF
-pacf
+pacf_plot = plot_pacf
