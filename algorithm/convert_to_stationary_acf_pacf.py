@@ -11,6 +11,6 @@ plt.figure(figsize=(10,4))
 plt.plot(tickerDf.Close)
 plt.title('Stock Price over Time (%s)'%ticker_symbol, fontsize=20)
 plt.ylabel('Price', fontsize=16)
-for year in range(2015,2021):
+for year in range(2018,2021):
     plt.axvline(pd.to_datetime(str(year)+'-01-01'), color='k', linestyle='--', alpha=0.2)
 plt.savefig('plot1.png')
