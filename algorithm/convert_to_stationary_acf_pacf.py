@@ -28,9 +28,9 @@ plt.ylabel('Price Difference', fontsize=16)
 plt.savefig('plot2.png')
 
 #ACF
-acf_plot = plot_acf(tickerDf.FirstDifference)
+acf_plot = plot_acf(tickerDf.Diff)
 plt.savefig('plot3.png')
 
 #PACF
-pacf_plot = plot_pacf(tickerDf.FirstDifference)
+pacf_plot = plot_pacf(tickerDf.Diff)
 plt.savefig('plot4.png')
