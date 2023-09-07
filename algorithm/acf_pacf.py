@@ -12,4 +12,5 @@ df_ice_cream['date'] = pd.to_datetime(df_ice_cream.date)
 df_ice_cream.set_index('date', inplace=True)
 start_date = pd.to_datetime('2010-01-01')
 df_ice_cream = df_ice_cream[start_date:]
-print(df_ice_cream.head())
+
+plt.figure
