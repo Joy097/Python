@@ -15,3 +15,6 @@ production_ice_cream = pd.read_csv('ice_cream.csv', parse_dates=[0], index_col=0
 production_ice_cream.rename('production', inplace=True)
 print(production_ice_cream)
 production_ice_cream=production_ice_cream.asfreq(pd.infer_ferq(production_ice_cream.index))
+
+start_date = pd.to_datetime('2010-01-01')
+production_ice_cream = production_ice_cream[s]
