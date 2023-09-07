@@ -43,3 +43,4 @@ test_data = production_ice_cream[train_end+timedelta(days=1):test_end]
 model = ARMA(train_data, order=(3,0))
 
 #fit model
+model_fit = model.fit()
