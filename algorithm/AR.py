@@ -45,4 +45,5 @@ model = ARMA(train_data, order=(3,0))
 #fit model
 model_fit = model.fit()
 
-#now the p-value close to 0 can be considered. but 
+#now the p-value close to 0 can be considered. but any lag greater than 0.5 has to be avoided
+pred_start_date = 
