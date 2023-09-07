@@ -49,4 +49,4 @@ model_fit = model.fit()
 pred_start_date = test_data.index[0]
 pred_end_date = test_data.index[-1]
 
-prediction
+predictions = model_fit
