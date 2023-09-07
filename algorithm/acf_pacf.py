@@ -18,7 +18,8 @@ plt.plot(df_ice_cream.production)
 plt.title('Ice-cream production', fontsize=20)
 plt.ylabel('Production', fontsize = 16)
 for year in range(2011,2021):
-    plt.axvline(pd.to_datetime(str(year)+'-01-01'), color='k', linestyle='--', alpha=0.2)
+    plt.axvline(pd.to_datetime(str(year)+'-01-01'), color='k', linestyle='--', alpha=0.8)
+plt.savefig('my_plot1.png') 
 #ACF
 acf_plot = plot_acf(df_ice_cream.production, lags=100)
 plt.savefig('my_plot.png')  
