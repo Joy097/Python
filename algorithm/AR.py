@@ -39,4 +39,4 @@ test_end = datetime(2019,12,1)
 train_data = production_ice_cream[:train_end]
 test_data = production_ice_cream[train_end+timedelta(days=1):test_end]
 
-train
+# train with AR
