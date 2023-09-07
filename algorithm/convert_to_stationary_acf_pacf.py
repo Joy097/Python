@@ -1,6 +1,7 @@
 import yfinance as yf
 import matplotlib.pyplot as plt
 import pandas as pd
+import numpy as np
 
 ticker_symbol = 'SPY'
 tickerdata = yf.Ticker(ticker_symbol)
@@ -14,4 +15,6 @@ plt.ylabel('Price', fontsize=16)
 plt.savefig('plot1.png')
 
 #try to make stationary
-print(len(tickerDf.Close.values[:-1]))
+first_diffs = tickerDf.Close.values[1:] - tickerDf.Close.values[:-1]
+first_diffs = np.concatenate([first_diffs, [0]])
+
