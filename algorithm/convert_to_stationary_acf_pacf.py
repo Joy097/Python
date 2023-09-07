@@ -2,6 +2,8 @@ import yfinance as yf
 import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
+from statsmodels.graphics.tsaplots import plot_acf, plot_pacf
+
 
 ticker_symbol = 'SPY'
 tickerdata = yf.Ticker(ticker_symbol)
@@ -24,3 +26,11 @@ plt.plot(tickerDf.Diff)
 plt.title('First Difference over Time (%s)'%ticker_symbol, fontsize=20)
 plt.ylabel('Price Difference', fontsize=16)
 plt.savefig('plot2.png')
+
+#ACF
+acf_plot = plot_acf(tickerDf.FirstDifference)
+plt.savefig('plot3.png')
+
+#PACF
+pacf_plot = plot_pacf(tickerDf.FirstDifference)
+plt.savefig('plot4.png')
