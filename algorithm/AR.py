@@ -11,5 +11,5 @@ from time import time
 
 def parser(s):
     return datetime.strptime(s, '%Y-%m-%d')
-
-production_ice_cream.rename('')
+production_ice_cream = pd.read_csv('ice_cream.csv', parse_dates=[0], index_col=0, squeeze=True, date_parser=parser)
+production_ice_cream.rename('production', )
