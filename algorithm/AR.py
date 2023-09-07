@@ -48,3 +48,5 @@ model_fit = model.fit()
 #now the p-value close to 0 can be considered. but any lag greater than 0.5 has to be avoided
 pred_start_date = test_data.index[0]
 pred_end_date = test_data.index[-1]
+
+prediction
