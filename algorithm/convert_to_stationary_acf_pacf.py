@@ -14,4 +14,4 @@ plt.ylabel('Price', fontsize=16)
 plt.savefig('plot1.png')
 
 #try to make stationary
-print(tickerDf.Close.values[1:])
+print(len(tickerDf.Close.values))
