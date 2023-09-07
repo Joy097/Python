@@ -5,6 +5,7 @@ from pandas import datetime
 from datetime import timedelta
 from pandas.plotting import register_matplotlib_converters
 from statsmodels.graphics.tsaplots import plot_acf, plot_pacf
+import statsmodels.api as sm
 from statsmodels.tsa.arima_model import ARMA
 register_matplotlib_converters()
 from time import time
