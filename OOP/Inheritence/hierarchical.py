@@ -4,4 +4,7 @@ class father:
         self.age = age
         self.work= False
     def work(self):
-        self.work
+        self.work = True
+        
+class son1(father):
+    
