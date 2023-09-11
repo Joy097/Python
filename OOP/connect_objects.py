@@ -14,4 +14,7 @@ class wife:
     def marry(self,husband):
         self.husband = husband
         
-husb
+husband1 = husband('joy','26')
+wife1 = wife('janvi','25')
+
+print(husband1.name)
