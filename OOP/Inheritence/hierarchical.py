@@ -1,3 +1,6 @@
 class father:
     def __init__(self, name, age):
-        pass
+        self.name = name
+        self.age = age
+    def __repr__(self):
+        print()
