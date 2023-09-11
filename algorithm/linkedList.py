@@ -1,3 +1,4 @@
-next = ''
-next = 0
-print
+class Node:
+    next = ''
+    def Node(data):
+        
