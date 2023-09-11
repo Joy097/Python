@@ -17,3 +17,5 @@ class son2(father):
         self.age = age
         self.work= False
         
+zaber = son1('zaber',34)
+print(zaber.)
