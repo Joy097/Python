@@ -20,4 +20,4 @@ husband1.marry(wife1)
 wife1.marry(husband1)
 
 print(husband1.wife.name,husband1.wife.age)
-print(wife.husband1.name,wife.husband1.age)
+print(wife1.husband.name,wife1.husband.age)
