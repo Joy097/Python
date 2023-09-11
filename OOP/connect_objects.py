@@ -17,7 +17,7 @@ class wife:
 husband1 = husband('joy','26')
 wife1 = wife('janvi','25')
 husband1.marry(wife1)
-wife1.marry
+wife1.marry(husband1)
 
 print(husband1.wife.name,husband1.wife.age)
-print(husband1.wife.name,husband1.wife.age)
+print(wife.husband1.name,wife.husband1.age)
