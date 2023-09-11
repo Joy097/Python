@@ -12,7 +12,7 @@ class son1(father):
         self.age = age
         self.working= False
         super().__init__(fname,fage)
-        self.fname = super.name
+        self.fname = super().name
         
 class son2(father):
     def __init__(self, name, age, fname, fage):
@@ -20,7 +20,7 @@ class son2(father):
         self.age = age
         self.working= False
         super().__init__(fname,fage)
-        self.fname = super.name
+        self.fname = super().name
         
 zaber = son1('zaber',34, 'jaker','59')
 zaber.work()
