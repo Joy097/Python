@@ -18,4 +18,4 @@ class son2(father):
         self.work= False
         
 zaber = son1('zaber',34)
-print(zaber.father.name)
+print(zaber.work())
