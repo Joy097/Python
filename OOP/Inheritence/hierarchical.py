@@ -12,6 +12,7 @@ class son1(father):
         self.age = age
         self.working= False
         super().__init__(fname,fage)
+        self.fname
 class son2(father):
     def __init__(self, name, age, fname, fage):
         self.name = name
