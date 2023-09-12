@@ -49,12 +49,13 @@ class LinkedList:
     def removeItem(self,index):
         head = self.head
         count = 0
-        while head:
+        while head.next:
             if count == index - 1:
                 head.next = head.next.next
-                
-            else:
-                head.next = head.next
+                break
+            
+            head = head.next
+            count+=1
             
                 
 LL = LinkedList()
