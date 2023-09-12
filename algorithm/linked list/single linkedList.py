@@ -49,8 +49,8 @@ class LinkedList:
     def removeItem(self,index):
         length = self.get_length() -1 
         
-        
-        for i in range
+        for i in range(length):
+            
                 
 LL = LinkedList()
 LL.insertFirst(2)
