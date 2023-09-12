@@ -26,7 +26,24 @@ class LinkedList:
     def insertList(self,list):
         for data in list:
             self.insertLast(data)
+            
+    def removeItem(self,index):
+        if index<1 or index>self.get_length():
+            raise Exception("Invalid index!") 
         
+        if index == 1:
+            self.head = self.head.next
+            return
+        
+        head = self.head
+        count = 1
+        while head.next:
+            if count == index - 1:
+                head.next = head.next.next
+                break
+            
+            head = head.next
+            count+=1
     def printlist(self):
         if self.head:
             head = self.head
@@ -46,18 +63,6 @@ class LinkedList:
             head = head.next
         return count
             
-    def removeItem(self,index):
-        if index
-        
-        head = self.head
-        count = 1
-        while head.next:
-            if count == index - 1:
-                head.next = head.next.next
-                break
-            
-            head = head.next
-            count+=1
             
                 
 LL = LinkedList()
@@ -67,7 +72,7 @@ LL.insertFirst(4)
 LL.insertFirst(5)
 LL.insertLast(6)
 LL.insertList([3,7,9,0])
-LL.removeItem(4)
+LL.removeItem(1)
 print(LL.printlist())
 print(LL.get_length())
         
