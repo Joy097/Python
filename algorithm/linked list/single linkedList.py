@@ -47,9 +47,15 @@ class LinkedList:
         return count
             
     def removeItem(self,index):
-        length = self.get_length() -1 
+        head = self.head
+        length = self.get_length() -2 
+        index = index - 1
         
         for i in range(length):
+            if i == index:
+                
+                
+            head = head.next
             
                 
 LL = LinkedList()
