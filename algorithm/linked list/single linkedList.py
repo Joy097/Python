@@ -10,16 +10,16 @@ class LinkedList:
         newNode = Node(data,self.head)
         self.head = newNode
             
-    def print(self):
+    def printlist(self):
         if(self.head):
             head = self.head
             str = ''
             while(head):
-                str = head + '-->'
+                str += head.data + '-->'
                 head = head.next
         else:
             return "List is empty"
-        
+        return str
                 
 LL = LinkedList()
 LL.insertFirst(2)
@@ -27,5 +27,5 @@ LL.insertFirst(3)
 LL.insertFirst(4)
 LL.insertFirst(5)
 
-LL.print
+print(LL.print())
         
