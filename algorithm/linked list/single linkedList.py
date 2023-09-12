@@ -8,9 +8,11 @@ class LinkedList:
     def __init__(self):
         self.head = None
         
+        
     def insertFirst(self,data):
         newNode = Node(data,self.head)
         self.head = newNode
+            
             
     def insertLast(self,data):
         
@@ -23,9 +25,11 @@ class LinkedList:
         else:
             self.head = Node(data,None)
             
+            
     def insertList(self,list):
         for data in list:
             self.insertLast(data)
+            
             
     def removeItem(self,index):
         if index<1 or index>self.get_length():
@@ -44,6 +48,27 @@ class LinkedList:
             
             head = head.next
             count+=1
+            
+            
+    def insertAt(self,index,val):
+        if index<1 or index>self.get_length():
+            raise Exception("Invalid index!") 
+        
+        if index == 1:
+            self.insertFirst(val)
+            return
+            
+        head = self.head
+        count = 1
+        while head.next:
+            if count == index - 1:
+                head.next = val
+                break
+            
+            head = head.next
+            count+=1
+        
+    
     def printlist(self):
         if self.head:
             head = self.head
@@ -54,6 +79,7 @@ class LinkedList:
         else:
             return "List is empty"
         return string
+    
     
     def get_length(self):
         head = self.head
