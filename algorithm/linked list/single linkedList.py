@@ -32,19 +32,25 @@ class LinkedList:
             head = self.head
             string = ''
             while(head):
-                string += str(head.data) + '-->'
+                string += str(head.data) + ' --> '
                 head = head.next
         else:
             return "List is empty"
         return string
     
     def get_length(self):
-        headitr = self.head
-        count = 1  # beacuse headitr.next = None 
-        while headitr.next:
+        head = self.head
+        count = 1  # beacuse head.next = None will not go to loop but it is the last value
+        while head.next:
             count+=1
-            headitr = headitr.next
+            head = head.next
+        return count
             
+    def removeItem(self,index):
+        length = self.get_length() -1 
+        
+        
+        for i in range
                 
 LL = LinkedList()
 LL.insertFirst(2)
