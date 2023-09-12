@@ -6,20 +6,22 @@ class Node:
 class LinkedList:
     def __init__(self):
         self.head = None
+        
     def insertFirst(self,data):
         newNode = Node(data,self.head)
         self.head = newNode
             
+    def insert
     def printlist(self):
         if(self.head):
             head = self.head
-            str = ''
+            string = ''
             while(head):
-                str += head.data + '-->'
+                string += str(head.data) + '-->'
                 head = head.next
         else:
             return "List is empty"
-        return str
+        return string
                 
 LL = LinkedList()
 LL.insertFirst(2)
