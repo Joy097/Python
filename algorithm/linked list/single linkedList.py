@@ -7,9 +7,12 @@ class LinkedList:
     def __init__(self):
         self.head = None
     def insertFirst(self,data):
-        current = ()
+        newNode = Node(data,self.head)
+        self.head = newNode
+            
         
         
 LL = LinkedList()
 LL.insertFirst(2)
+LL.insertFirst(3)
         
