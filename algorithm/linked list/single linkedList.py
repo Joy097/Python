@@ -62,7 +62,9 @@ class LinkedList:
         count = 1
         while head.next:
             if count == index - 1:
-                head.next = val
+                temp = head.next
+                head.next = Node(val)
+                head.next.next = temp
                 break
             
             head = head.next
@@ -98,7 +100,8 @@ LL.insertFirst(4)
 LL.insertFirst(5)
 LL.insertLast(6)
 LL.insertList([3,7,9,0])
-LL.removeItem(1)
+LL.removeItem(6)
+LL.insertAt(4,18)
 print(LL.printlist())
 print(LL.get_length())
         
