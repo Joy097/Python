@@ -4,6 +4,7 @@ class Node:
         self.next = next
 
 class LinkedList:
+    
     def __init__(self):
         self.head = None
         
@@ -12,13 +13,15 @@ class LinkedList:
         self.head = newNode
             
     def insertLast(self,data):
+        
         if self.head:
             itrNode = self.head
-            while itrNode:
+            while itrNode.next:
                 itrNode = itrNode.next
             itrNode.next = Node(data,None)
-        else:
             
+        else:
+            self.head = Node(data,None)
         
     def printlist(self):
         if self.head:
@@ -36,6 +39,7 @@ LL.insertFirst(2)
 LL.insertFirst(3)
 LL.insertFirst(4)
 LL.insertFirst(5)
+LL.insertLast(6)
 
 print(LL.printlist())
         
