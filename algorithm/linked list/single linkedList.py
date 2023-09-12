@@ -11,7 +11,8 @@ class LinkedList:
         newNode = Node(data,self.head)
         self.head = newNode
             
-    def insert
+    def insertLast(self,data):
+        
     def printlist(self):
         if(self.head):
             head = self.head
