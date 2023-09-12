@@ -39,9 +39,11 @@ class LinkedList:
         return string
     
     def get_length(self):
-        head = self.head
-        count = 0
-        while self.next:
+        headitr = self.head
+        count = 1  # beacuse headitr.next = None 
+        while headitr.next:
+            count+=1
+            headitr = headitr.next
             
                 
 LL = LinkedList()
