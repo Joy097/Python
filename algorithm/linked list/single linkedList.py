@@ -47,8 +47,10 @@ class LinkedList:
         return count
             
     def removeItem(self,index):
+        if index
+        
         head = self.head
-        count = 0
+        count = 1
         while head.next:
             if count == index - 1:
                 head.next = head.next.next
@@ -65,7 +67,7 @@ LL.insertFirst(4)
 LL.insertFirst(5)
 LL.insertLast(6)
 LL.insertList([3,7,9,0])
-LL.removeItem(2)
+LL.removeItem(4)
 print(LL.printlist())
 print(LL.get_length())
         
