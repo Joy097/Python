@@ -22,6 +22,9 @@ class LinkedList:
             
         else:
             self.head = Node(data,None)
+            
+    def insertList(self,list):
+        self.head
         
     def printlist(self):
         if self.head:
