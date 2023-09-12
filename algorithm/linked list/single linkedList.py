@@ -12,9 +12,11 @@ class LinkedList:
         self.head = newNode
             
     def insertLast(self,data):
+        if self.head:
+            
         
     def printlist(self):
-        if(self.head):
+        if self.head:
             head = self.head
             string = ''
             while(head):
