@@ -62,9 +62,7 @@ class LinkedList:
         count = 1
         while head.next:
             if count == index - 1:
-                temp = head.next
-                head.next = Node(val)
-                head.next.next = temp
+                head.next = Node(val,head.next)
                 break
             
             head = head.next
