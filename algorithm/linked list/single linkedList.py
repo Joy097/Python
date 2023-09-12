@@ -13,6 +13,11 @@ class LinkedList:
             
     def insertLast(self,data):
         if self.head:
+            itrNode = self.head
+            while itrNode:
+                itrNode = itrNode.next
+            itrNode.next = Node(data,None)
+        else:
             
         
     def printlist(self):
