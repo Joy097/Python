@@ -24,7 +24,8 @@ class LinkedList:
             self.head = Node(data,None)
             
     def insertList(self,list):
-        self.head
+        for data in list:
+            self.insertLast(data)
         
     def printlist(self):
         if self.head:
@@ -36,6 +37,12 @@ class LinkedList:
         else:
             return "List is empty"
         return string
+    
+    def get_length(self):
+        head = self.head
+        count = 0
+        while self.next:
+            
                 
 LL = LinkedList()
 LL.insertFirst(2)
@@ -43,6 +50,7 @@ LL.insertFirst(3)
 LL.insertFirst(4)
 LL.insertFirst(5)
 LL.insertLast(6)
-
+LL.insertList([3,7,9,0])
 print(LL.printlist())
+print(LL.get_length())
         
