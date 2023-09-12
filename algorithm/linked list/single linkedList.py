@@ -53,9 +53,10 @@ class LinkedList:
         
         for i in range(length):
             if i == index:
+                head = head.next.next
                 
-                
-            head = head.next
+            else:
+                head = head.next
             
                 
 LL = LinkedList()
@@ -65,6 +66,7 @@ LL.insertFirst(4)
 LL.insertFirst(5)
 LL.insertLast(6)
 LL.insertList([3,7,9,0])
+LL.removeItem(2)
 print(LL.printlist())
 print(LL.get_length())
         
