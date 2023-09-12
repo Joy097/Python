@@ -27,5 +27,5 @@ LL.insertFirst(3)
 LL.insertFirst(4)
 LL.insertFirst(5)
 
-print(LL.print())
+print(LL.printlist())
         
