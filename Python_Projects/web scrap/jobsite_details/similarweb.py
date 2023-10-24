@@ -4,8 +4,7 @@ import pandas as pd
 
 
 
-url = f"https://siterankdata.com/{site}"
+url = f"https://www.similarweb.com/website/bdjobs.com"
 page = requests.get(url)
 soup = BeautifulSoup(page.text, 'html.parser')
-table = soup.find_all('h1')[1]
-hlist = [head.text.strip() for head in table]
+print(soup)
